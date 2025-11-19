@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platy.AdventureWorks.Repository", "src\Platy.AdventureWorks.Repository\Platy.AdventureWorks.Repository.csproj", "{88C92859-B1E1-4DA0-8A71-28EEC21D9477}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{713DCC63-DB07-49FB-85B3-83018F9E58C1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E77D82E9-BE92-491A-BCFE-4EF004D14804}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platy.AdventureWorks.Repository.Tests.Integration", "tests\Platy.AdventureWorks.Repository.Tests.Integration\Platy.AdventureWorks.Repository.Tests.Integration.csproj", "{DEF81212-32A2-48AE-AA16-9A5BC891D3BD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A02B28B0-F190-41E4-BDA8-B58B75111602}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+		LICENSE = LICENSE
+		README.md = README.md
+		.github\workflows\ci.yml = .github\workflows\ci.yml
+		.github\workflows\publish.yml = .github\workflows\publish.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Platy.Shared", "Platy.Shared\src\Platy.Shared\Platy.Shared.csproj", "{3803CC26-D620-41A4-8CD1-4A999652B9FC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{1E935CD6-B83A-49DB-81E4-0051B28C405C}"
+	ProjectSection(SolutionItems) = preProject
+		docker\Dockerfile = docker\Dockerfile
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88C92859-B1E1-4DA0-8A71-28EEC21D9477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88C92859-B1E1-4DA0-8A71-28EEC21D9477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88C92859-B1E1-4DA0-8A71-28EEC21D9477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88C92859-B1E1-4DA0-8A71-28EEC21D9477}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEF81212-32A2-48AE-AA16-9A5BC891D3BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEF81212-32A2-48AE-AA16-9A5BC891D3BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEF81212-32A2-48AE-AA16-9A5BC891D3BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEF81212-32A2-48AE-AA16-9A5BC891D3BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3803CC26-D620-41A4-8CD1-4A999652B9FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3803CC26-D620-41A4-8CD1-4A999652B9FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3803CC26-D620-41A4-8CD1-4A999652B9FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3803CC26-D620-41A4-8CD1-4A999652B9FC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{88C92859-B1E1-4DA0-8A71-28EEC21D9477} = {713DCC63-DB07-49FB-85B3-83018F9E58C1}
+		{DEF81212-32A2-48AE-AA16-9A5BC891D3BD} = {E77D82E9-BE92-491A-BCFE-4EF004D14804}
+	EndGlobalSection
+EndGlobal

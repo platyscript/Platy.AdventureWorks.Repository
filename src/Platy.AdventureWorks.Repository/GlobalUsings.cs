@@ -1,0 +1,12 @@
+﻿global using System.Net.Mail;
+global using System.Reflection;
+global using Microsoft.Data.SqlClient;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Logging;
+global using AutoMapper;
+global using NetTopologySuite;
+global using Injectio.Attributes;
+global using Platy.Shared;
+global using Injectio;

@@ -1,0 +1,137 @@
+EntityClass: ProductVendor
+EntityNamespace: 'Platy.AdventureWorks.Repository.Data.Entities'
+EntityBaseClass: DomainEntity
+TableNaming: Singular
+ContextProperty: ProductVendors
+TableSchema: 'Purchasing'
+TableName: 'ProductVendor'
+MappingClass: ProductVendorConfiguration
+MappingNamespace: 'Platy.AdventureWorks.Repository.Data.EntityConfiguration'
+MapperClass: ProductVendorProfile
+MapperNamespace: 'ProductVendorProfile'
+MapperBaseClass: Profile
+IsView: False
+Properties:
+  - PropertyName: ProductId
+    ColumnName: 'ProductID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: True
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: BusinessEntityId
+    ColumnName: 'BusinessEntityID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: True
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: AverageLeadTime
+    ColumnName: 'AverageLeadTime'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: StandardPrice
+    ColumnName: 'StandardPrice'
+    StoreType: money
+    NativeType: 'money'
+    DataType: Currency
+    SystemType: Decimal
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: LastReceiptCost
+    ColumnName: 'LastReceiptCost'
+    StoreType: money
+    NativeType: 'money'
+    DataType: Currency
+    SystemType: Decimal
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: LastReceiptDate
+    ColumnName: 'LastReceiptDate'
+    StoreType: datetime
+    NativeType: 'datetime'
+    DataType: DateTime
+    SystemType: DateTime
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: MinOrderQty
+    ColumnName: 'MinOrderQty'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: MaxOrderQty
+    ColumnName: 'MaxOrderQty'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: OnOrderQty
+    ColumnName: 'OnOrderQty'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: UnitMeasureCode
+    ColumnName: 'UnitMeasureCode'
+    StoreType: nchar(3)
+    NativeType: 'nchar'
+    DataType: StringFixedLength
+    SystemType: String
+    Size: 3
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: ModifiedDate
+    ColumnName: 'ModifiedDate'
+    StoreType: datetime
+    NativeType: 'datetime'
+    DataType: DateTime
+    SystemType: DateTime
+    Default: '(getdate())'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False

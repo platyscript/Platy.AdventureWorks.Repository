@@ -1,0 +1,50 @@
+EntityClass: CountryRegionCurrency
+EntityNamespace: 'Platy.AdventureWorks.Repository.Data.Entities'
+EntityBaseClass: DomainEntity
+TableNaming: Singular
+ContextProperty: CountryRegionCurrencies
+TableSchema: 'Sales'
+TableName: 'CountryRegionCurrency'
+MappingClass: CountryRegionCurrencyConfiguration
+MappingNamespace: 'Platy.AdventureWorks.Repository.Data.EntityConfiguration'
+MapperClass: CountryRegionCurrencyProfile
+MapperNamespace: 'CountryRegionCurrencyProfile'
+MapperBaseClass: Profile
+IsView: False
+Properties:
+  - PropertyName: CountryRegionCode
+    ColumnName: 'CountryRegionCode'
+    StoreType: nvarchar(3)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 3
+    IsNullable: False
+    IsPrimaryKey: True
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: CurrencyCode
+    ColumnName: 'CurrencyCode'
+    StoreType: nchar(3)
+    NativeType: 'nchar'
+    DataType: StringFixedLength
+    SystemType: String
+    Size: 3
+    IsNullable: False
+    IsPrimaryKey: True
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: ModifiedDate
+    ColumnName: 'ModifiedDate'
+    StoreType: datetime
+    NativeType: 'datetime'
+    DataType: DateTime
+    SystemType: DateTime
+    Default: '(getdate())'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False

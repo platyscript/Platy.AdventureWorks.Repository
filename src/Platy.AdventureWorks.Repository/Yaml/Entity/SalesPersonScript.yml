@@ -1,0 +1,119 @@
+EntityClass: SalesPerson
+EntityNamespace: 'Platy.AdventureWorks.Repository.Data.Entities'
+EntityBaseClass: DomainEntity
+TableNaming: Singular
+ContextProperty: SalesPeople
+TableSchema: 'Sales'
+TableName: 'SalesPerson'
+MappingClass: SalesPersonConfiguration
+MappingNamespace: 'Platy.AdventureWorks.Repository.Data.EntityConfiguration'
+MapperClass: SalesPersonProfile
+MapperNamespace: 'SalesPersonProfile'
+MapperBaseClass: Profile
+IsView: False
+Properties:
+  - PropertyName: BusinessEntityId
+    ColumnName: 'BusinessEntityID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: True
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: TerritoryId
+    ColumnName: 'TerritoryID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: SalesQuota
+    ColumnName: 'SalesQuota'
+    StoreType: money
+    NativeType: 'money'
+    DataType: Currency
+    SystemType: Decimal
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Bonus
+    ColumnName: 'Bonus'
+    StoreType: money
+    NativeType: 'money'
+    DataType: Currency
+    SystemType: Decimal
+    Default: '((0.00))'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: CommissionPct
+    ColumnName: 'CommissionPct'
+    StoreType: smallmoney
+    NativeType: 'smallmoney'
+    DataType: Currency
+    SystemType: Decimal
+    Default: '((0.00))'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: SalesYTD
+    ColumnName: 'SalesYTD'
+    StoreType: money
+    NativeType: 'money'
+    DataType: Currency
+    SystemType: Decimal
+    Default: '((0.00))'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: SalesLastYear
+    ColumnName: 'SalesLastYear'
+    StoreType: money
+    NativeType: 'money'
+    DataType: Currency
+    SystemType: Decimal
+    Default: '((0.00))'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Rowguid
+    ColumnName: 'rowguid'
+    StoreType: uniqueidentifier
+    NativeType: 'uniqueidentifier'
+    DataType: Guid
+    SystemType: Guid
+    Default: '(newid())'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: True
+  - PropertyName: ModifiedDate
+    ColumnName: 'ModifiedDate'
+    StoreType: datetime
+    NativeType: 'datetime'
+    DataType: DateTime
+    SystemType: DateTime
+    Default: '(getdate())'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False

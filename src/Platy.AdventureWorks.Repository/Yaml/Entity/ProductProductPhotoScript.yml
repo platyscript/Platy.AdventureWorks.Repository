@@ -1,0 +1,60 @@
+EntityClass: ProductProductPhoto
+EntityNamespace: 'Platy.AdventureWorks.Repository.Data.Entities'
+EntityBaseClass: DomainEntity
+TableNaming: Singular
+ContextProperty: ProductProductPhotos
+TableSchema: 'Production'
+TableName: 'ProductProductPhoto'
+MappingClass: ProductProductPhotoConfiguration
+MappingNamespace: 'Platy.AdventureWorks.Repository.Data.EntityConfiguration'
+MapperClass: ProductProductPhotoProfile
+MapperNamespace: 'ProductProductPhotoProfile'
+MapperBaseClass: Profile
+IsView: False
+Properties:
+  - PropertyName: ProductId
+    ColumnName: 'ProductID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: True
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: ProductPhotoId
+    ColumnName: 'ProductPhotoID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: True
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Primary
+    ColumnName: 'Primary'
+    StoreType: bit
+    NativeType: 'bit'
+    DataType: Boolean
+    SystemType: Boolean
+    Default: '((0))'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: ModifiedDate
+    ColumnName: 'ModifiedDate'
+    StoreType: datetime
+    NativeType: 'datetime'
+    DataType: DateTime
+    SystemType: DateTime
+    Default: '(getdate())'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False

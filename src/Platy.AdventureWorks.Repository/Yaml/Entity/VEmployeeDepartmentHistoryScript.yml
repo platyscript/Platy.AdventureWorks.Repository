@@ -1,0 +1,143 @@
+EntityClass: VEmployeeDepartmentHistory
+EntityNamespace: 'Platy.AdventureWorks.Repository.Data.Entities'
+EntityBaseClass: DomainEntity
+TableNaming: Singular
+ContextProperty: VEmployeeDepartmentHistories
+TableSchema: 'HumanResources'
+TableName: 'vEmployeeDepartmentHistory'
+MappingClass: VEmployeeDepartmentHistoryConfiguration
+MappingNamespace: 'Platy.AdventureWorks.Repository.Data.EntityConfiguration'
+MapperClass: VEmployeeDepartmentHistoryProfile
+MapperNamespace: 'VEmployeeDepartmentHistoryProfile'
+MapperBaseClass: Profile
+IsView: True
+Properties:
+  - PropertyName: BusinessEntityId
+    ColumnName: 'BusinessEntityID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Title
+    ColumnName: 'Title'
+    StoreType: nvarchar(8)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 8
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: FirstName
+    ColumnName: 'FirstName'
+    StoreType: nvarchar(50)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 50
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: MiddleName
+    ColumnName: 'MiddleName'
+    StoreType: nvarchar(50)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 50
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: LastName
+    ColumnName: 'LastName'
+    StoreType: nvarchar(50)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 50
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Suffix
+    ColumnName: 'Suffix'
+    StoreType: nvarchar(10)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 10
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Shift
+    ColumnName: 'Shift'
+    StoreType: nvarchar(50)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 50
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Department
+    ColumnName: 'Department'
+    StoreType: nvarchar(50)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 50
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: GroupName
+    ColumnName: 'GroupName'
+    StoreType: nvarchar(50)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 50
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: StartDate
+    ColumnName: 'StartDate'
+    StoreType: date
+    NativeType: 'date'
+    DataType: Date
+    SystemType: DateOnly
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: EndDate
+    ColumnName: 'EndDate'
+    StoreType: date
+    NativeType: 'date'
+    DataType: Date
+    SystemType: DateOnly
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False

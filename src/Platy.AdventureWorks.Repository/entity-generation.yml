@@ -1,0 +1,191 @@
+project:
+  namespace: 'Platy.AdventureWorks.Repository'
+  directory: .\
+  nullable: true
+  fileScopedNamespace: true
+database:
+  provider: SqlServer
+  # config name to read the connection string from the user secrets file
+  connectionName: 'AdventureWorksDb'
+  # the user secret identifier, can be shared with .net core project
+  userSecretsId: 'cbd8507e-7f3e-4f55-963b-1bbf9e24c26b'
+  schemas:
+    - HumanResources
+    - Person
+    - Production
+    - Purchasing
+    - Sales
+  # exclude tables or columns: Changed in v7.x
+  exclude:
+    # list of expressions for tables to exclude, source is Schema.TableName
+    tables:
+      - exact: Production.Document
+    # list of expressions for columns to exclude, source is Schema.TableName.ColumnName
+    columns:
+      - exact: Person.Address.SpatialLocation
+
+data:
+  context:
+    namespace: '{Project.Namespace}.Data'
+    directory: '{Project.Directory}\Data'
+    name: 'AdventureWorksContext'
+    baseClass: DbContext
+    document: true
+    propertyNaming: Plural
+  entity:
+    namespace: '{Project.Namespace}.Data.Entities'
+    directory: '{Project.Directory}\Data\Entities'
+    document: true
+    entityNaming: Singular
+    relationshipNaming: Plural
+    mappingAttributes: true
+    prefixWithSchemaName: false
+    renaming:
+      # list of regular expressions to clean property names
+      properties:
+        - ^{Table.Name}(?=Id|Name)
+  mapping:
+    generate: false
+    rowVersion: Long
+    namespace: '{Project.Namespace}.Data.EntityConfiguration'
+    directory: '{Project.Directory}\Data\EntityConfiguration'
+    document: true
+model:
+  shared:
+    namespace: '{Project.Namespace}.Domain.Models'
+    directory: '{Project.Directory}\Domain\{Entity.Name}\Models'
+  read:
+    generate: true
+    name: '{Entity.Name}ReadModel'
+    baseClass: IEntityReadModel
+    document: true
+  create:
+    generate: true
+    name: '{Entity.Name}CreateModel'
+    baseClass: IEntityCreateModel
+    document: true
+    exclude:
+      entities:
+        - vAdditionalContactInfo
+        - vEmployee
+        - vEmployeeDepartment
+        - vEmployeeDepartmentHistory
+        - vIndividualCustomer
+        - vPersonDemographics
+        - vJobCandidate
+        - vJobCandidateEmployment
+        - vJobCandidateEducation
+        - vProductAndDescription
+        - vProductModelCatalogDescription
+        - vProductModelInstructions
+        - vSalesPerson
+        - vSalesPersonSalesByFiscalYears
+        - vStateProvinceCountryRegion
+        - vStoreWithDemographics
+        - vStoreWithContacts
+        - vStoreWithAddresses
+        - vVendorWithContacts
+        - vVendorWithAddresses
+  update:
+    generate: true
+    name: '{Entity.Name}UpdateModel'
+    document: true
+    baseClass: IEntityUpdateModel
+    exclude:
+      entities:
+        - vAdditionalContactInfo
+        - vEmployee
+        - vEmployeeDepartment
+        - vEmployeeDepartmentHistory
+        - vIndividualCustomer
+        - vPersonDemographics
+        - vJobCandidate
+        - vJobCandidateEmployment
+        - vJobCandidateEducation
+        - vProductAndDescription
+        - vProductModelCatalogDescription
+        - vProductModelInstructions
+        - vSalesPerson
+        - vSalesPersonSalesByFiscalYears
+        - vStateProvinceCountryRegion
+        - vStoreWithDemographics
+        - vStoreWithContacts
+        - vStoreWithAddresses
+        - vVendorWithContacts
+        - vVendorWithAddresses
+  mapper:
+    generate: true
+    name: '{Entity.Name}Profile'
+    baseClass: Profile
+    namespace: '{Project.Namespace}.Domain.Mapping'
+    directory: '{Project.Directory}\Domain\{Entity.Name}\Mapping'
+    document: true
+  validator:
+    generate: true
+    name: '{Model.Name}Validator'
+    baseClass: 'AbstractValidator<{Model.Name}>'
+    namespace: '{Project.Namespace}.Domain.Validation'
+    directory: '{Project.Directory}\Domain\{Entity.Name}\Validation'
+    attributes: '[RegisterSingleton<IValidator<{Model.Name}>>]'
+    document: true
+script:
+  # collection script template with current Model as a variable
+  # collection of script template with current Entity as a variable
+  context:
+    - templatePath: '.\templates\cs-datacontext.csx'           # path to script file
+      namespace: '{Project.Namespace}.Data'
+      directory: '{Project.Directory}\Data'
+      fileName: 'AdventureWorksContext.cs'               # filename to save script output
+      overwrite: true                                  # overwrite existing file
+      merge: false
+  entity:
+    - templatePath: '.\templates\yaml-entity.csx'           # path to script file
+      fileName: '{Entity.Name}Script.yml'               # filename to save script output
+      directory: '{Project.Directory}\Yaml\Entity'   # directory to save script output
+      baseClass: DomainEntity
+      overwrite: true                                  # overwrite existing file
+      merge: true
+    - templatePath: '.\templates\cs-entity-configuration.csx'           # path to script file
+      namespace: '{Project.Namespace}.Data.EntityConfiguration'
+      directory: '{Project.Directory}\Data\EntityConfiguration'
+      fileName: '{Entity.Name}Configuration.cs'               # filename to save script output
+      overwrite: true                                  # overwrite existing file
+      merge: false
+    - templatePath: '.\templates\cs-entity.csx'           # path to script file
+      fileName: '{Entity.Name}.cs'               # filename to save script output
+      namespace: '{Project.Namespace}.Data.Entities'
+      directory: '{Project.Directory}\Data\Entities'
+      baseClass: IIdentity
+      overwrite: true                                  # overwrite existing file
+      merge: true
+    - templatePath: '.\templates\cs-repository.csx'           # path to script file
+      fileName: '{Entity.Name}Repository.cs'               # filename to save script output
+      namespace: '{Project.Namespace}'
+      directory: '{Project.Directory}\Repository'
+      overwrite: true                                  # overwrite existing file
+      merge: true
+    - templatePath: '.\templates\cs-create-events.csx'           # path to script file
+      fileName: '{Entity.Name}CreatedEvent.cs'               # filename to save script output
+      namespace: '{Project.Namespace}.Events'
+      directory: '{Project.Directory}\Events\Create'
+      overwrite: true                                  # overwrite existing file
+      merge: true
+    - templatePath: '.\templates\cs-create-events.csx'           # path to script file
+      fileName: '{Entity.Name}UpdatedEvent.cs'               # filename to save script output
+      namespace: '{Project.Namespace}.Events'
+      directory: '{Project.Directory}\Events\Update'
+      overwrite: true                                  # overwrite existing file
+      merge: true
+    - templatePath: '.\templates\cs-create-events.csx'           # path to script file
+      fileName: '{Entity.Name}DeletedEvent.cs'               # filename to save script output
+      namespace: '{Project.Namespace}.Events'
+      directory: '{Project.Directory}\Events\Delete'
+      overwrite: true                                  # overwrite existing file
+      merge: true
+#  model:
+#    - templatePath: '.\templates\cs-model.csx'            # path to script file
+#      fileName: '{Model.Name}.cs'                # filename to save script output
+#      directory: '{Project.Directory}\Domain\Models'   # directory to save script output
+#      namespace: '{Project.Namespace}.Domain.Models'
+#      overwrite: true                                  # overwrite existing file
+#      merge: true    

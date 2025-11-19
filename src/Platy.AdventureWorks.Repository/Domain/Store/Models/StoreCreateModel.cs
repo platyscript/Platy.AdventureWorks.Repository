@@ -1,0 +1,60 @@
+namespace Platy.AdventureWorks.Repository.Domain.Models;
+
+/// <summary>
+///   View Model class
+/// </summary>
+public class StoreCreateModel
+  : IEntityCreateModel
+{
+  #region Generated Properties
+
+  /// <summary>
+  ///   Gets or sets the property value for 'BusinessEntityId'.
+  /// </summary>
+  /// <value>
+  ///   The property value for 'BusinessEntityId'.
+  /// </value>
+  public int BusinessEntityId { get; set; }
+
+  /// <summary>
+  ///   Gets or sets the property value for 'Name'.
+  /// </summary>
+  /// <value>
+  ///   The property value for 'Name'.
+  /// </value>
+  public string Name { get; set; } = null!;
+
+  /// <summary>
+  ///   Gets or sets the property value for 'SalesPersonId'.
+  /// </summary>
+  /// <value>
+  ///   The property value for 'SalesPersonId'.
+  /// </value>
+  public int? SalesPersonId { get; set; }
+
+  /// <summary>
+  ///   Gets or sets the property value for 'Demographics'.
+  /// </summary>
+  /// <value>
+  ///   The property value for 'Demographics'.
+  /// </value>
+  public string? Demographics { get; set; }
+
+  /// <summary>
+  ///   Gets or sets the property value for 'Rowguid'.
+  /// </summary>
+  /// <value>
+  ///   The property value for 'Rowguid'.
+  /// </value>
+  public Guid Rowguid { get; set; }
+
+  /// <summary>
+  ///   Gets or sets the property value for 'ModifiedDate'.
+  /// </summary>
+  /// <value>
+  ///   The property value for 'ModifiedDate'.
+  /// </value>
+  public DateTime ModifiedDate { get; set; }
+
+  #endregion
+}

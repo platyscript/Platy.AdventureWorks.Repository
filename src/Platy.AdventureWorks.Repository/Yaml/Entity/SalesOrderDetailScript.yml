@@ -1,0 +1,141 @@
+EntityClass: SalesOrderDetail
+EntityNamespace: 'Platy.AdventureWorks.Repository.Data.Entities'
+EntityBaseClass: DomainEntity
+TableNaming: Singular
+ContextProperty: SalesOrderDetails
+TableSchema: 'Sales'
+TableName: 'SalesOrderDetail'
+MappingClass: SalesOrderDetailConfiguration
+MappingNamespace: 'Platy.AdventureWorks.Repository.Data.EntityConfiguration'
+MapperClass: SalesOrderDetailProfile
+MapperNamespace: 'SalesOrderDetailProfile'
+MapperBaseClass: Profile
+IsView: False
+Properties:
+  - PropertyName: SalesOrderId
+    ColumnName: 'SalesOrderID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: True
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Id
+    ColumnName: 'SalesOrderDetailID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    ValueGenerated: OnAdd
+    IsNullable: False
+    IsPrimaryKey: True
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: CarrierTrackingNumber
+    ColumnName: 'CarrierTrackingNumber'
+    StoreType: nvarchar(25)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 25
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: OrderQty
+    ColumnName: 'OrderQty'
+    StoreType: smallint
+    NativeType: 'smallint'
+    DataType: Int16
+    SystemType: Int16
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: ProductId
+    ColumnName: 'ProductID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: SpecialOfferId
+    ColumnName: 'SpecialOfferID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: UnitPrice
+    ColumnName: 'UnitPrice'
+    StoreType: money
+    NativeType: 'money'
+    DataType: Currency
+    SystemType: Decimal
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: UnitPriceDiscount
+    ColumnName: 'UnitPriceDiscount'
+    StoreType: money
+    NativeType: 'money'
+    DataType: Currency
+    SystemType: Decimal
+    Default: '((0.0))'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: LineTotal
+    ColumnName: 'LineTotal'
+    StoreType: numeric(38,6)
+    NativeType: 'numeric'
+    DataType: Decimal
+    SystemType: Decimal
+    ValueGenerated: OnAddOrUpdate
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Rowguid
+    ColumnName: 'rowguid'
+    StoreType: uniqueidentifier
+    NativeType: 'uniqueidentifier'
+    DataType: Guid
+    SystemType: Guid
+    Default: '(newid())'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: True
+  - PropertyName: ModifiedDate
+    ColumnName: 'ModifiedDate'
+    StoreType: datetime
+    NativeType: 'datetime'
+    DataType: DateTime
+    SystemType: DateTime
+    Default: '(getdate())'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False

@@ -1,0 +1,82 @@
+EntityClass: SalesTerritoryHistory
+EntityNamespace: 'Platy.AdventureWorks.Repository.Data.Entities'
+EntityBaseClass: DomainEntity
+TableNaming: Singular
+ContextProperty: SalesTerritoryHistories
+TableSchema: 'Sales'
+TableName: 'SalesTerritoryHistory'
+MappingClass: SalesTerritoryHistoryConfiguration
+MappingNamespace: 'Platy.AdventureWorks.Repository.Data.EntityConfiguration'
+MapperClass: SalesTerritoryHistoryProfile
+MapperNamespace: 'SalesTerritoryHistoryProfile'
+MapperBaseClass: Profile
+IsView: False
+Properties:
+  - PropertyName: BusinessEntityId
+    ColumnName: 'BusinessEntityID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: True
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: TerritoryId
+    ColumnName: 'TerritoryID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: True
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: StartDate
+    ColumnName: 'StartDate'
+    StoreType: datetime
+    NativeType: 'datetime'
+    DataType: DateTime
+    SystemType: DateTime
+    IsNullable: False
+    IsPrimaryKey: True
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: EndDate
+    ColumnName: 'EndDate'
+    StoreType: datetime
+    NativeType: 'datetime'
+    DataType: DateTime
+    SystemType: DateTime
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Rowguid
+    ColumnName: 'rowguid'
+    StoreType: uniqueidentifier
+    NativeType: 'uniqueidentifier'
+    DataType: Guid
+    SystemType: Guid
+    Default: '(newid())'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: True
+  - PropertyName: ModifiedDate
+    ColumnName: 'ModifiedDate'
+    StoreType: datetime
+    NativeType: 'datetime'
+    DataType: DateTime
+    SystemType: DateTime
+    Default: '(getdate())'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False

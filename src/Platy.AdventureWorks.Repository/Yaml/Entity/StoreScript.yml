@@ -1,0 +1,83 @@
+EntityClass: Store
+EntityNamespace: 'Platy.AdventureWorks.Repository.Data.Entities'
+EntityBaseClass: DomainEntity
+TableNaming: Singular
+ContextProperty: Stores
+TableSchema: 'Sales'
+TableName: 'Store'
+MappingClass: StoreConfiguration
+MappingNamespace: 'Platy.AdventureWorks.Repository.Data.EntityConfiguration'
+MapperClass: StoreProfile
+MapperNamespace: 'StoreProfile'
+MapperBaseClass: Profile
+IsView: False
+Properties:
+  - PropertyName: BusinessEntityId
+    ColumnName: 'BusinessEntityID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: True
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Name
+    ColumnName: 'Name'
+    StoreType: nvarchar(50)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 50
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: SalesPersonId
+    ColumnName: 'SalesPersonID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: True
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Demographics
+    ColumnName: 'Demographics'
+    StoreType: xml
+    NativeType: 'xml'
+    DataType: String
+    SystemType: String
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Rowguid
+    ColumnName: 'rowguid'
+    StoreType: uniqueidentifier
+    NativeType: 'uniqueidentifier'
+    DataType: Guid
+    SystemType: Guid
+    Default: '(newid())'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: True
+  - PropertyName: ModifiedDate
+    ColumnName: 'ModifiedDate'
+    StoreType: datetime
+    NativeType: 'datetime'
+    DataType: DateTime
+    SystemType: DateTime
+    Default: '(getdate())'
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False

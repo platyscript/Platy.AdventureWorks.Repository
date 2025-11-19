@@ -1,0 +1,156 @@
+EntityClass: VVendorWithContacts
+EntityNamespace: 'Platy.AdventureWorks.Repository.Data.Entities'
+EntityBaseClass: DomainEntity
+TableNaming: Singular
+ContextProperty: VVendorWithContacts
+TableSchema: 'Purchasing'
+TableName: 'vVendorWithContacts'
+MappingClass: VVendorWithContactsConfiguration
+MappingNamespace: 'Platy.AdventureWorks.Repository.Data.EntityConfiguration'
+MapperClass: VVendorWithContactsProfile
+MapperNamespace: 'VVendorWithContactsProfile'
+MapperBaseClass: Profile
+IsView: True
+Properties:
+  - PropertyName: BusinessEntityId
+    ColumnName: 'BusinessEntityID'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Name
+    ColumnName: 'Name'
+    StoreType: nvarchar(50)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 50
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: ContactType
+    ColumnName: 'ContactType'
+    StoreType: nvarchar(50)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 50
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Title
+    ColumnName: 'Title'
+    StoreType: nvarchar(8)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 8
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: FirstName
+    ColumnName: 'FirstName'
+    StoreType: nvarchar(50)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 50
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: MiddleName
+    ColumnName: 'MiddleName'
+    StoreType: nvarchar(50)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 50
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: LastName
+    ColumnName: 'LastName'
+    StoreType: nvarchar(50)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 50
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: Suffix
+    ColumnName: 'Suffix'
+    StoreType: nvarchar(10)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 10
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: PhoneNumber
+    ColumnName: 'PhoneNumber'
+    StoreType: nvarchar(25)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 25
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: PhoneNumberType
+    ColumnName: 'PhoneNumberType'
+    StoreType: nvarchar(50)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 50
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: EmailAddress
+    ColumnName: 'EmailAddress'
+    StoreType: nvarchar(50)
+    NativeType: 'nvarchar'
+    DataType: String
+    SystemType: String
+    Size: 50
+    IsNullable: True
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False
+  - PropertyName: EmailPromotion
+    ColumnName: 'EmailPromotion'
+    StoreType: @int
+    NativeType: '@int'
+    DataType: Int32
+    SystemType: Int32
+    IsNullable: False
+    IsPrimaryKey: False
+    IsForeignKey: False
+    IsRowVersion: False
+    IsUnique: False

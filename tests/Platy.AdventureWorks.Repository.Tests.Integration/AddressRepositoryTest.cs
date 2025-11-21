@@ -22,67 +22,63 @@ public class AddressRepositoryTest
     _serviceProvider = fixture.ServiceProvider;
   }
 
-  // [Fact]
-  // public async Task GetAsync_ValidAddressId_ReturnsValidAddress()
-  // {
-  //   // Arrange
-  //   var addressRepository = _serviceProvider.GetService<IAddressRepository>();
-  //
-  //   // Act
-  //   var addressReadModel = await addressRepository!.GetAsync(123, CancellationToken.None);
-  //
-  //   // Assert
-  //   addressReadModel.Value.Id.ShouldBe(123);
-  // }
-  //
-  // [Fact]
-  // private async Task CreateAsync_InvalidPostalCode_ReturnsValidationErrors()
-  // {
-  //   // Arrange
-  //   var addressRepository = _serviceProvider.GetService<IAddressRepository>();
-  //   var readModel = await addressRepository!.GetAsync(1, CancellationToken.None);
-  //   var newModel = new AddressCreateModel
-  //   {
-  //     AddressLine1 = readModel.Value.AddressLine2 + "test" + Random.Shared.NextInt64(),
-  //     AddressLine2 = readModel.Value.AddressLine2 + "test" + Random.Shared.NextInt64(),
-  //     City = readModel.Value.City + "test" + Random.Shared.NextInt64(),
-  //     PostalCode = readModel.Value.PostalCode + "test" + Random.Shared.NextInt64(),
-  //     StateProvinceId = readModel.Value.StateProvinceId
-  //   };
-  //
-  //   // Act
-  //   var addressReadModel = await addressRepository.CreateAsync(newModel, CancellationToken.None);
-  //
-  //   // Assert
-  //   addressReadModel.IsInvalid().ShouldBe(true);
-  //   addressReadModel.ValidationErrors.Count().ShouldBe(1);
-  // }
-  //
-  // [Fact]
-  // private async Task CreateAsync_ValidAddressValues_ReturnsSuccess()
-  // {
-  //   // Arrange
-  //   var addressRepository = _serviceProvider.GetService<IAddressRepository>();
-  //   var readModel = await addressRepository!.GetAsync(1, CancellationToken.None);
-  //   var newModel = new AddressCreateModel
-  //   {
-  //     AddressLine1 = readModel.Value.AddressLine2 + "test" + Random.Shared.NextInt64(),
-  //     AddressLine2 = readModel.Value.AddressLine2 + "test" + Random.Shared.NextInt64(),
-  //     City = readModel.Value.City + "test" + Random.Shared.NextInt64(),
-  //     PostalCode = readModel.Value.PostalCode,
-  //     StateProvinceId = readModel.Value.StateProvinceId
-  //   };
-  //
-  //   // Act
-  //   var addressReadModel = await addressRepository.CreateAsync(newModel, CancellationToken.None);
-  //
-  //   // Assert
-  //   addressReadModel.IsInvalid().ShouldBe(false);
-  //   addressReadModel.Errors.Count().ShouldBe(0);
-  //   addressReadModel.Value.AddressLine1.ShouldBe(newModel.AddressLine1);
-  // }
-//   addressReadModel.IsInvalid().ShouldBe(false);
-  //   addressReadModel.Errors.Count().ShouldBe(0);
-  //   addressReadModel.Value.AddressLine1.ShouldBe(newModel.AddressLine1);
-  // }
+  [Fact]
+  public async Task GetAsync_ValidAddressId_ReturnsValidAddress()
+  {
+    // Arrange
+    var addressRepository = _serviceProvider.GetService<IAddressRepository>();
+  
+    // Act
+    var addressReadModel = await addressRepository!.GetAsync(123, CancellationToken.None);
+  
+    // Assert
+    addressReadModel.Value.Id.ShouldBe(123);
+  }
+  
+  [Fact]
+  private async Task CreateAsync_InvalidPostalCode_ReturnsValidationErrors()
+  {
+    // Arrange
+    var addressRepository = _serviceProvider.GetService<IAddressRepository>();
+    var readModel = await addressRepository!.GetAsync(1, CancellationToken.None);
+    var newModel = new AddressCreateModel
+    {
+      AddressLine1 = readModel.Value.AddressLine2 + "test" + Random.Shared.NextInt64(),
+      AddressLine2 = readModel.Value.AddressLine2 + "test" + Random.Shared.NextInt64(),
+      City = readModel.Value.City + "test" + Random.Shared.NextInt64(),
+      PostalCode = readModel.Value.PostalCode + "test" + Random.Shared.NextInt64(),
+      StateProvinceId = readModel.Value.StateProvinceId
+    };
+  
+    // Act
+    var addressReadModel = await addressRepository.CreateAsync(newModel, CancellationToken.None);
+  
+    // Assert
+    addressReadModel.IsInvalid().ShouldBe(true);
+    addressReadModel.ValidationErrors.Count().ShouldBe(1);
+  }
+  
+  [Fact]
+  private async Task CreateAsync_ValidAddressValues_ReturnsSuccess()
+  {
+    // Arrange
+    var addressRepository = _serviceProvider.GetService<IAddressRepository>();
+    var readModel = await addressRepository!.GetAsync(1, CancellationToken.None);
+    var newModel = new AddressCreateModel
+    {
+      AddressLine1 = readModel.Value.AddressLine2 + "test" + Random.Shared.NextInt64(),
+      AddressLine2 = readModel.Value.AddressLine2 + "test" + Random.Shared.NextInt64(),
+      City = readModel.Value.City + "test" + Random.Shared.NextInt64(),
+      PostalCode = readModel.Value.PostalCode,
+      StateProvinceId = readModel.Value.StateProvinceId
+    };
+  
+    // Act
+    var addressReadModel = await addressRepository.CreateAsync(newModel, CancellationToken.None);
+  
+    // Assert
+    addressReadModel.IsInvalid().ShouldBe(false);
+    addressReadModel.Errors.Count().ShouldBe(0);
+    addressReadModel.Value.AddressLine1.ShouldBe(newModel.AddressLine1);
+  }
 }

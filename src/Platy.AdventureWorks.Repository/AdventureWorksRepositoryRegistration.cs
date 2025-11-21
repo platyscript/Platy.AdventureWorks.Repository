@@ -23,7 +23,11 @@ public static class AdventureWorksRepositoryRegistration
     // Add the DbContext
     services.AddDbContext<AdventureWorksContext>((provider, options) =>
     {
-      options.UseSqlServer(connectionString)
+      options.UseSqlServer(connectionString, sqlOptions =>
+        {
+          sqlOptions.EnableRetryOnFailure(10, TimeSpan.FromSeconds(10), null);
+
+        })
         .AddInterceptors(provider.GetRequiredService<EventDispatchInterceptor>());
     });
 

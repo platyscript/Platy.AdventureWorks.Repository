@@ -10,8 +10,8 @@ namespace Platy.AdventureWorks.Repository.Tests.Integration;
 
 public class DatabaseFixture : IDisposable
 {
-  private IFutureDockerImage? _msSqlImage;
-  private MsSqlContainer? _msSqlContainer;
+  // private IFutureDockerImage? _msSqlImage;
+  // private MsSqlContainer? _msSqlContainer;
 
   public DatabaseFixture()
   {
@@ -43,7 +43,7 @@ public class DatabaseFixture : IDisposable
     //   .WithEnvironment("MSSQL_SA_PASSWORD", "Test123Test*")
     //   .WithEnvironment("ACCEPT_EULA","Y")
     //   .WithCleanUp(true)
-    //   .WithPortBinding(1433,1433)
+   //   .WithPortBinding(1433,1433)
     //   .WithName("adventure-works-db")
     //   .WithWaitStrategy(Wait.ForUnixContainer().UntilMessageIsLogged("Server is ready."))
     //   .Build();

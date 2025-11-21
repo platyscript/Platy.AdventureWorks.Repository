@@ -1,6 +1,6 @@
 [submodule "EntityFrameworkCore.Generator"]
 	path = EntityFrameworkCore.Generator
-	url = https://github.com/tremorscript/EntityFrameworkCore.Generator
+	url = https://github.com/platyscript/EntityFrameworkCore.Generator
 [submodule "Platy.Shared"]
 	path = Platy.Shared
 	url = https://github.com/tremorscript/Platy.Shared

@@ -3,4 +3,4 @@
 	url = https://github.com/platyscript/EntityFrameworkCore.Generator
 [submodule "Platy.Shared"]
 	path = Platy.Shared
-	url = https://github.com/tremorscript/Platy.Shared
+	url = https://github.com/platyscript/Platy.Shared

@@ -1,0 +1,109 @@
+EntityClass: Address
+EntityNamespace: 'Platy.AdventureWorks.Repository.Data.Entities'
+EntityBaseClass: DomainEntity
+TableNaming: Singular
+ContextProperty: Addresses
+TableSchema: 'Person'
+TableName: 'Address'
+MappingClass: AddressConfiguration
+MappingNamespace: 'Platy.AdventureWorks.Repository.Data.EntityConfiguration'
+MapperClass: AddressProfile
+MapperNamespace: 'AddressProfile'
+MapperBaseClass: Profile
+IsView: False
+Properties:
+    - PropertyName: Id
+      ColumnName: 'AddressID'
+      StoreType: @int
+      NativeType: '@int'
+      DataType: Int32
+      SystemType: Int32
+      ValueGenerated: OnAdd
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: AddressLine1
+      ColumnName: 'AddressLine1'
+      StoreType: nvarchar(60)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: 60
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: True
+    - PropertyName: AddressLine2
+      ColumnName: 'AddressLine2'
+      StoreType: nvarchar(60)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: 60
+      IsNullable: True
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: True
+    - PropertyName: City
+      ColumnName: 'City'
+      StoreType: nvarchar(30)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: 30
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: True
+    - PropertyName: StateProvinceId
+      ColumnName: 'StateProvinceID'
+      StoreType: @int
+      NativeType: '@int'
+      DataType: Int32
+      SystemType: Int32
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: True
+      IsRowVersion: False
+      IsUnique: True
+    - PropertyName: PostalCode
+      ColumnName: 'PostalCode'
+      StoreType: nvarchar(15)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: 15
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: True
+    - PropertyName: Rowguid
+      ColumnName: 'rowguid'
+      StoreType: uniqueidentifier
+      NativeType: 'uniqueidentifier'
+      DataType: Guid
+      SystemType: Guid
+      Default: '(newid())'
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: True
+    - PropertyName: ModifiedDate
+      ColumnName: 'ModifiedDate'
+      StoreType: datetime
+      NativeType: 'datetime'
+      DataType: DateTime
+      SystemType: DateTime
+      Default: '(getdate())'
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False

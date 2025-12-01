@@ -1,0 +1,60 @@
+EntityClass: PersonPhone
+EntityNamespace: 'Platy.AdventureWorks.Repository.Data.Entities'
+EntityBaseClass: DomainEntity
+TableNaming: Singular
+ContextProperty: PersonPhones
+TableSchema: 'Person'
+TableName: 'PersonPhone'
+MappingClass: PersonPhoneConfiguration
+MappingNamespace: 'Platy.AdventureWorks.Repository.Data.EntityConfiguration'
+MapperClass: PersonPhoneProfile
+MapperNamespace: 'PersonPhoneProfile'
+MapperBaseClass: Profile
+IsView: False
+Properties:
+    - PropertyName: BusinessEntityId
+      ColumnName: 'BusinessEntityID'
+      StoreType: @int
+      NativeType: '@int'
+      DataType: Int32
+      SystemType: Int32
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: True
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: PhoneNumber
+      ColumnName: 'PhoneNumber'
+      StoreType: nvarchar(25)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: 25
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: PhoneNumberTypeId
+      ColumnName: 'PhoneNumberTypeID'
+      StoreType: @int
+      NativeType: '@int'
+      DataType: Int32
+      SystemType: Int32
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: True
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: ModifiedDate
+      ColumnName: 'ModifiedDate'
+      StoreType: datetime
+      NativeType: 'datetime'
+      DataType: DateTime
+      SystemType: DateTime
+      Default: '(getdate())'
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False

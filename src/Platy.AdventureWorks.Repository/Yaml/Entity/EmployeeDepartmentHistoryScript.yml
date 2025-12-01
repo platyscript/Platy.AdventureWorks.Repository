@@ -1,0 +1,81 @@
+EntityClass: EmployeeDepartmentHistory
+EntityNamespace: 'Platy.AdventureWorks.Repository.Data.Entities'
+EntityBaseClass: DomainEntity
+TableNaming: Singular
+ContextProperty: EmployeeDepartmentHistories
+TableSchema: 'HumanResources'
+TableName: 'EmployeeDepartmentHistory'
+MappingClass: EmployeeDepartmentHistoryConfiguration
+MappingNamespace: 'Platy.AdventureWorks.Repository.Data.EntityConfiguration'
+MapperClass: EmployeeDepartmentHistoryProfile
+MapperNamespace: 'EmployeeDepartmentHistoryProfile'
+MapperBaseClass: Profile
+IsView: False
+Properties:
+    - PropertyName: BusinessEntityId
+      ColumnName: 'BusinessEntityID'
+      StoreType: @int
+      NativeType: '@int'
+      DataType: Int32
+      SystemType: Int32
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: True
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: DepartmentId
+      ColumnName: 'DepartmentID'
+      StoreType: smallint
+      NativeType: 'smallint'
+      DataType: Int16
+      SystemType: Int16
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: True
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: ShiftId
+      ColumnName: 'ShiftID'
+      StoreType: tinyint
+      NativeType: 'tinyint'
+      DataType: Byte
+      SystemType: Byte
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: True
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: StartDate
+      ColumnName: 'StartDate'
+      StoreType: date
+      NativeType: 'date'
+      DataType: Date
+      SystemType: DateOnly
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: EndDate
+      ColumnName: 'EndDate'
+      StoreType: date
+      NativeType: 'date'
+      DataType: Date
+      SystemType: DateOnly
+      IsNullable: True
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: ModifiedDate
+      ColumnName: 'ModifiedDate'
+      StoreType: datetime
+      NativeType: 'datetime'
+      DataType: DateTime
+      SystemType: DateTime
+      Default: '(getdate())'
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False

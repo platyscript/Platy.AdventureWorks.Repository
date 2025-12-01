@@ -1,0 +1,144 @@
+EntityClass: VJobCandidateEmployment
+EntityNamespace: 'Platy.AdventureWorks.Repository.Data.Entities'
+EntityBaseClass: DomainEntity
+TableNaming: Singular
+ContextProperty: VJobCandidateEmployments
+TableSchema: 'HumanResources'
+TableName: 'vJobCandidateEmployment'
+MappingClass: VJobCandidateEmploymentConfiguration
+MappingNamespace: 'Platy.AdventureWorks.Repository.Data.EntityConfiguration'
+MapperClass: VJobCandidateEmploymentProfile
+MapperNamespace: 'VJobCandidateEmploymentProfile'
+MapperBaseClass: Profile
+IsView: True
+Properties:
+    - PropertyName: Id
+      ColumnName: 'JobCandidateID'
+      StoreType: @int
+      NativeType: '@int'
+      DataType: Int32
+      SystemType: Int32
+      ValueGenerated: OnAdd
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: EmpStartDate
+      ColumnName: 'Emp.StartDate'
+      StoreType: datetime
+      NativeType: 'datetime'
+      DataType: DateTime
+      SystemType: DateTime
+      IsNullable: True
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: EmpEndDate
+      ColumnName: 'Emp.EndDate'
+      StoreType: datetime
+      NativeType: 'datetime'
+      DataType: DateTime
+      SystemType: DateTime
+      IsNullable: True
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: EmpOrgName
+      ColumnName: 'Emp.OrgName'
+      StoreType: nvarchar(100)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: 100
+      IsNullable: True
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: EmpJobTitle
+      ColumnName: 'Emp.JobTitle'
+      StoreType: nvarchar(100)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: 100
+      IsNullable: True
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: EmpResponsibility
+      ColumnName: 'Emp.Responsibility'
+      StoreType: nvarchar(max)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: -1
+      IsNullable: True
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: EmpFunctionCategory
+      ColumnName: 'Emp.FunctionCategory'
+      StoreType: nvarchar(max)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: -1
+      IsNullable: True
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: EmpIndustryCategory
+      ColumnName: 'Emp.IndustryCategory'
+      StoreType: nvarchar(max)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: -1
+      IsNullable: True
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: EmpLocCountryRegion
+      ColumnName: 'Emp.Loc.CountryRegion'
+      StoreType: nvarchar(max)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: -1
+      IsNullable: True
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: EmpLocState
+      ColumnName: 'Emp.Loc.State'
+      StoreType: nvarchar(max)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: -1
+      IsNullable: True
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: EmpLocCity
+      ColumnName: 'Emp.Loc.City'
+      StoreType: nvarchar(max)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: -1
+      IsNullable: True
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False

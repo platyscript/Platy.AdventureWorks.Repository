@@ -12,60 +12,60 @@ MapperNamespace: 'SalesPersonQuotaHistoryProfile'
 MapperBaseClass: Profile
 IsView: False
 Properties:
-  - PropertyName: BusinessEntityId
-    ColumnName: 'BusinessEntityID'
-    StoreType: @int
-    NativeType: '@int'
-    DataType: Int32
-    SystemType: Int32
-    IsNullable: False
-    IsPrimaryKey: True
-    IsForeignKey: True
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: QuotaDate
-    ColumnName: 'QuotaDate'
-    StoreType: datetime
-    NativeType: 'datetime'
-    DataType: DateTime
-    SystemType: DateTime
-    IsNullable: False
-    IsPrimaryKey: True
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: SalesQuota
-    ColumnName: 'SalesQuota'
-    StoreType: money
-    NativeType: 'money'
-    DataType: Currency
-    SystemType: Decimal
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: Rowguid
-    ColumnName: 'rowguid'
-    StoreType: uniqueidentifier
-    NativeType: 'uniqueidentifier'
-    DataType: Guid
-    SystemType: Guid
-    Default: '(newid())'
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: True
-  - PropertyName: ModifiedDate
-    ColumnName: 'ModifiedDate'
-    StoreType: datetime
-    NativeType: 'datetime'
-    DataType: DateTime
-    SystemType: DateTime
-    Default: '(getdate())'
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
+    - PropertyName: BusinessEntityId
+      ColumnName: 'BusinessEntityID'
+      StoreType: @int
+      NativeType: '@int'
+      DataType: Int32
+      SystemType: Int32
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: True
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: QuotaDate
+      ColumnName: 'QuotaDate'
+      StoreType: datetime
+      NativeType: 'datetime'
+      DataType: DateTime
+      SystemType: DateTime
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: SalesQuota
+      ColumnName: 'SalesQuota'
+      StoreType: money
+      NativeType: 'money'
+      DataType: Currency
+      SystemType: Decimal
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: Rowguid
+      ColumnName: 'rowguid'
+      StoreType: uniqueidentifier
+      NativeType: 'uniqueidentifier'
+      DataType: Guid
+      SystemType: Guid
+      Default: '(newid())'
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: True
+    - PropertyName: ModifiedDate
+      ColumnName: 'ModifiedDate'
+      StoreType: datetime
+      NativeType: 'datetime'
+      DataType: DateTime
+      SystemType: DateTime
+      Default: '(getdate())'
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False

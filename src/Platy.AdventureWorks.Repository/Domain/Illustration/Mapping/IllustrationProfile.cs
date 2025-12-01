@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="Illustration" /> .
+/// Mapper class for entity <see cref="Illustration"/> .
 /// </summary>
-public class IllustrationProfile
-  : Profile
+public partial class IllustrationProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="IllustrationProfile" /> class.
-  /// </summary>
-  public IllustrationProfile()
-  {
-    CreateMap<Illustration, IllustrationReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="IllustrationProfile"/> class.
+    /// </summary>
+    public IllustrationProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.Illustration, Platy.AdventureWorks.Repository.Domain.Models.IllustrationReadModel>();
 
-    CreateMap<IllustrationCreateModel, Illustration>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.IllustrationCreateModel, Platy.AdventureWorks.Repository.Data.Entities.Illustration>();
 
-    CreateMap<Illustration, IllustrationCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.Illustration, Platy.AdventureWorks.Repository.Domain.Models.IllustrationCreateModel>();
 
-    CreateMap<Illustration, IllustrationUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.Illustration, Platy.AdventureWorks.Repository.Domain.Models.IllustrationUpdateModel>();
 
-    CreateMap<IllustrationUpdateModel, Illustration>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.IllustrationUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.Illustration>();
 
-    CreateMap<IllustrationReadModel, IllustrationUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.IllustrationReadModel, Platy.AdventureWorks.Repository.Domain.Models.IllustrationUpdateModel>();
+
+    }
+
 }

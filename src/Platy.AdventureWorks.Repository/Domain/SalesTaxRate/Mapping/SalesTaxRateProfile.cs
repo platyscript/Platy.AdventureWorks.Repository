@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="SalesTaxRate" /> .
+/// Mapper class for entity <see cref="SalesTaxRate"/> .
 /// </summary>
-public class SalesTaxRateProfile
-  : Profile
+public partial class SalesTaxRateProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="SalesTaxRateProfile" /> class.
-  /// </summary>
-  public SalesTaxRateProfile()
-  {
-    CreateMap<SalesTaxRate, SalesTaxRateReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="SalesTaxRateProfile"/> class.
+    /// </summary>
+    public SalesTaxRateProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.SalesTaxRate, Platy.AdventureWorks.Repository.Domain.Models.SalesTaxRateReadModel>();
 
-    CreateMap<SalesTaxRateCreateModel, SalesTaxRate>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.SalesTaxRateCreateModel, Platy.AdventureWorks.Repository.Data.Entities.SalesTaxRate>();
 
-    CreateMap<SalesTaxRate, SalesTaxRateCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.SalesTaxRate, Platy.AdventureWorks.Repository.Domain.Models.SalesTaxRateCreateModel>();
 
-    CreateMap<SalesTaxRate, SalesTaxRateUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.SalesTaxRate, Platy.AdventureWorks.Repository.Domain.Models.SalesTaxRateUpdateModel>();
 
-    CreateMap<SalesTaxRateUpdateModel, SalesTaxRate>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.SalesTaxRateUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.SalesTaxRate>();
 
-    CreateMap<SalesTaxRateReadModel, SalesTaxRateUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.SalesTaxRateReadModel, Platy.AdventureWorks.Repository.Domain.Models.SalesTaxRateUpdateModel>();
+
+    }
+
 }

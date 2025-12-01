@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="VIndividualCustomer" /> .
+/// Mapper class for entity <see cref="VIndividualCustomer"/> .
 /// </summary>
-public class VIndividualCustomerProfile
-  : Profile
+public partial class VIndividualCustomerProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="VIndividualCustomerProfile" /> class.
-  /// </summary>
-  public VIndividualCustomerProfile()
-  {
-    CreateMap<VIndividualCustomer, VIndividualCustomerReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="VIndividualCustomerProfile"/> class.
+    /// </summary>
+    public VIndividualCustomerProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VIndividualCustomer, Platy.AdventureWorks.Repository.Domain.Models.VIndividualCustomerReadModel>();
 
-    CreateMap<VIndividualCustomerCreateModel, VIndividualCustomer>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VIndividualCustomerCreateModel, Platy.AdventureWorks.Repository.Data.Entities.VIndividualCustomer>();
 
-    CreateMap<VIndividualCustomer, VIndividualCustomerCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VIndividualCustomer, Platy.AdventureWorks.Repository.Domain.Models.VIndividualCustomerCreateModel>();
 
-    CreateMap<VIndividualCustomer, VIndividualCustomerUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VIndividualCustomer, Platy.AdventureWorks.Repository.Domain.Models.VIndividualCustomerUpdateModel>();
 
-    CreateMap<VIndividualCustomerUpdateModel, VIndividualCustomer>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VIndividualCustomerUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.VIndividualCustomer>();
 
-    CreateMap<VIndividualCustomerReadModel, VIndividualCustomerUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VIndividualCustomerReadModel, Platy.AdventureWorks.Repository.Domain.Models.VIndividualCustomerUpdateModel>();
+
+    }
+
 }

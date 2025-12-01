@@ -1,19 +1,24 @@
+using System;
+
 using FluentValidation;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Validation;
 
 /// <summary>
-///   Validator class for <see cref="BusinessEntityContactUpdateModel" /> .
+/// Validator class for <see cref="BusinessEntityContactUpdateModel"/> .
 /// </summary>
 [RegisterSingleton<IValidator<BusinessEntityContactUpdateModel>>]
-public class BusinessEntityContactUpdateModelValidator
-  : AbstractValidator<BusinessEntityContactUpdateModel>
+public partial class BusinessEntityContactUpdateModelValidator
+    : AbstractValidator<BusinessEntityContactUpdateModel>
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="BusinessEntityContactUpdateModelValidator" /> class.
-  /// </summary>
-  public BusinessEntityContactUpdateModelValidator()
-  {
-  }
+    /// <summary>
+    /// Initializes a new instance of the <see cref="BusinessEntityContactUpdateModelValidator"/> class.
+    /// </summary>
+    public BusinessEntityContactUpdateModelValidator()
+    {
+        #region Generated Constructor
+        #endregion
+    }
+
 }

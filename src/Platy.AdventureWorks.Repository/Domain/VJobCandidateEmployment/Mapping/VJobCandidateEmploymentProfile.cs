@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="VJobCandidateEmployment" /> .
+/// Mapper class for entity <see cref="VJobCandidateEmployment"/> .
 /// </summary>
-public class VJobCandidateEmploymentProfile
-  : Profile
+public partial class VJobCandidateEmploymentProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="VJobCandidateEmploymentProfile" /> class.
-  /// </summary>
-  public VJobCandidateEmploymentProfile()
-  {
-    CreateMap<VJobCandidateEmployment, VJobCandidateEmploymentReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="VJobCandidateEmploymentProfile"/> class.
+    /// </summary>
+    public VJobCandidateEmploymentProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VJobCandidateEmployment, Platy.AdventureWorks.Repository.Domain.Models.VJobCandidateEmploymentReadModel>();
 
-    CreateMap<VJobCandidateEmploymentCreateModel, VJobCandidateEmployment>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VJobCandidateEmploymentCreateModel, Platy.AdventureWorks.Repository.Data.Entities.VJobCandidateEmployment>();
 
-    CreateMap<VJobCandidateEmployment, VJobCandidateEmploymentCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VJobCandidateEmployment, Platy.AdventureWorks.Repository.Domain.Models.VJobCandidateEmploymentCreateModel>();
 
-    CreateMap<VJobCandidateEmployment, VJobCandidateEmploymentUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VJobCandidateEmployment, Platy.AdventureWorks.Repository.Domain.Models.VJobCandidateEmploymentUpdateModel>();
 
-    CreateMap<VJobCandidateEmploymentUpdateModel, VJobCandidateEmployment>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VJobCandidateEmploymentUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.VJobCandidateEmployment>();
 
-    CreateMap<VJobCandidateEmploymentReadModel, VJobCandidateEmploymentUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VJobCandidateEmploymentReadModel, Platy.AdventureWorks.Repository.Domain.Models.VJobCandidateEmploymentUpdateModel>();
+
+    }
+
 }

@@ -1,19 +1,24 @@
+using System;
+
 using FluentValidation;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Validation;
 
 /// <summary>
-///   Validator class for <see cref="PersonCreditCardUpdateModel" /> .
+/// Validator class for <see cref="PersonCreditCardUpdateModel"/> .
 /// </summary>
 [RegisterSingleton<IValidator<PersonCreditCardUpdateModel>>]
-public class PersonCreditCardUpdateModelValidator
-  : AbstractValidator<PersonCreditCardUpdateModel>
+public partial class PersonCreditCardUpdateModelValidator
+    : AbstractValidator<PersonCreditCardUpdateModel>
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="PersonCreditCardUpdateModelValidator" /> class.
-  /// </summary>
-  public PersonCreditCardUpdateModelValidator()
-  {
-  }
+    /// <summary>
+    /// Initializes a new instance of the <see cref="PersonCreditCardUpdateModelValidator"/> class.
+    /// </summary>
+    public PersonCreditCardUpdateModelValidator()
+    {
+        #region Generated Constructor
+        #endregion
+    }
+
 }

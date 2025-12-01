@@ -1,25 +1,26 @@
+using System;
+
 using FluentValidation;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Validation;
 
 /// <summary>
-///   Validator class for <see cref="ProductSubcategoryCreateModel" /> .
+/// Validator class for <see cref="ProductSubcategoryCreateModel"/> .
 /// </summary>
 [RegisterSingleton<IValidator<ProductSubcategoryCreateModel>>]
-public class ProductSubcategoryCreateModelValidator
-  : AbstractValidator<ProductSubcategoryCreateModel>
+public partial class ProductSubcategoryCreateModelValidator
+    : AbstractValidator<ProductSubcategoryCreateModel>
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="ProductSubcategoryCreateModelValidator" /> class.
-  /// </summary>
-  public ProductSubcategoryCreateModelValidator()
-  {
-    #region Generated Constructor
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ProductSubcategoryCreateModelValidator"/> class.
+    /// </summary>
+    public ProductSubcategoryCreateModelValidator()
+    {
+        #region Generated Constructor
+        RuleFor(p => p.Name).NotEmpty();
+        RuleFor(p => p.Name).MaximumLength(50);
+        #endregion
+    }
 
-    RuleFor(p => p.Name).NotEmpty();
-    RuleFor(p => p.Name).MaximumLength(50);
-
-    #endregion
-  }
 }

@@ -12,97 +12,97 @@ MapperNamespace: 'VendorProfile'
 MapperBaseClass: Profile
 IsView: False
 Properties:
-  - PropertyName: BusinessEntityId
-    ColumnName: 'BusinessEntityID'
-    StoreType: @int
-    NativeType: '@int'
-    DataType: Int32
-    SystemType: Int32
-    IsNullable: False
-    IsPrimaryKey: True
-    IsForeignKey: True
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: AccountNumber
-    ColumnName: 'AccountNumber'
-    StoreType: nvarchar(15)
-    NativeType: 'nvarchar'
-    DataType: String
-    SystemType: String
-    Size: 15
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: True
-  - PropertyName: Name
-    ColumnName: 'Name'
-    StoreType: nvarchar(50)
-    NativeType: 'nvarchar'
-    DataType: String
-    SystemType: String
-    Size: 50
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: CreditRating
-    ColumnName: 'CreditRating'
-    StoreType: tinyint
-    NativeType: 'tinyint'
-    DataType: Byte
-    SystemType: Byte
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: PreferredVendorStatus
-    ColumnName: 'PreferredVendorStatus'
-    StoreType: bit
-    NativeType: 'bit'
-    DataType: Boolean
-    SystemType: Boolean
-    Default: '((1))'
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: ActiveFlag
-    ColumnName: 'ActiveFlag'
-    StoreType: bit
-    NativeType: 'bit'
-    DataType: Boolean
-    SystemType: Boolean
-    Default: '((1))'
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: PurchasingWebServiceURL
-    ColumnName: 'PurchasingWebServiceURL'
-    StoreType: nvarchar(1024)
-    NativeType: 'nvarchar'
-    DataType: String
-    SystemType: String
-    Size: 1024
-    IsNullable: True
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: ModifiedDate
-    ColumnName: 'ModifiedDate'
-    StoreType: datetime
-    NativeType: 'datetime'
-    DataType: DateTime
-    SystemType: DateTime
-    Default: '(getdate())'
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
+    - PropertyName: BusinessEntityId
+      ColumnName: 'BusinessEntityID'
+      StoreType: @int
+      NativeType: '@int'
+      DataType: Int32
+      SystemType: Int32
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: True
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: AccountNumber
+      ColumnName: 'AccountNumber'
+      StoreType: nvarchar(15)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: 15
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: True
+    - PropertyName: Name
+      ColumnName: 'Name'
+      StoreType: nvarchar(50)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: 50
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: CreditRating
+      ColumnName: 'CreditRating'
+      StoreType: tinyint
+      NativeType: 'tinyint'
+      DataType: Byte
+      SystemType: Byte
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: PreferredVendorStatus
+      ColumnName: 'PreferredVendorStatus'
+      StoreType: bit
+      NativeType: 'bit'
+      DataType: Boolean
+      SystemType: Boolean
+      Default: '((1))'
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: ActiveFlag
+      ColumnName: 'ActiveFlag'
+      StoreType: bit
+      NativeType: 'bit'
+      DataType: Boolean
+      SystemType: Boolean
+      Default: '((1))'
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: PurchasingWebServiceURL
+      ColumnName: 'PurchasingWebServiceURL'
+      StoreType: nvarchar(1024)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: 1024
+      IsNullable: True
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: ModifiedDate
+      ColumnName: 'ModifiedDate'
+      StoreType: datetime
+      NativeType: 'datetime'
+      DataType: DateTime
+      SystemType: DateTime
+      Default: '(getdate())'
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False

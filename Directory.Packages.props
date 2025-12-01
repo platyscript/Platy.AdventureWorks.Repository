@@ -26,14 +26,14 @@
     <PackageVersion Include="Microsoft.AspNetCore.Mvc.Testing" Version="9.0.2" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.2" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Relational" Version="9.0.2" />
-    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.0" />
+    <PackageVersion Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.2" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.2" />
     <PackageVersion Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.2" />
     <PackageVersion Include="Microsoft.Extensions.Configuration" Version="9.0.2" />
     <PackageVersion Include="Microsoft.Extensions.Configuration.UserSecrets" Version="9.0.2" />
-    <PackageVersion Include="Microsoft.Extensions.Logging" Version="9.0.0" />
-    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.2" />
-    <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.0" />
+    <PackageVersion Include="Microsoft.Extensions.Logging" Version="9.0.2" />
+    <PackageVersion Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.6" />
+    <PackageVersion Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="9.0.2" />
     <PackageVersion Include="Microsoft.NET.Test.Sdk" Version="17.13.0" />
     <PackageVersion Include="Newtonsoft.Json" Version="13.0.3" />
     <PackageVersion Include="NimblePros.Metronome" Version="0.4.0" />

@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="ProductProductPhoto" /> .
+/// Mapper class for entity <see cref="ProductProductPhoto"/> .
 /// </summary>
-public class ProductProductPhotoProfile
-  : Profile
+public partial class ProductProductPhotoProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="ProductProductPhotoProfile" /> class.
-  /// </summary>
-  public ProductProductPhotoProfile()
-  {
-    CreateMap<ProductProductPhoto, ProductProductPhotoReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ProductProductPhotoProfile"/> class.
+    /// </summary>
+    public ProductProductPhotoProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.ProductProductPhoto, Platy.AdventureWorks.Repository.Domain.Models.ProductProductPhotoReadModel>();
 
-    CreateMap<ProductProductPhotoCreateModel, ProductProductPhoto>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.ProductProductPhotoCreateModel, Platy.AdventureWorks.Repository.Data.Entities.ProductProductPhoto>();
 
-    CreateMap<ProductProductPhoto, ProductProductPhotoCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.ProductProductPhoto, Platy.AdventureWorks.Repository.Domain.Models.ProductProductPhotoCreateModel>();
 
-    CreateMap<ProductProductPhoto, ProductProductPhotoUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.ProductProductPhoto, Platy.AdventureWorks.Repository.Domain.Models.ProductProductPhotoUpdateModel>();
 
-    CreateMap<ProductProductPhotoUpdateModel, ProductProductPhoto>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.ProductProductPhotoUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.ProductProductPhoto>();
 
-    CreateMap<ProductProductPhotoReadModel, ProductProductPhotoUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.ProductProductPhotoReadModel, Platy.AdventureWorks.Repository.Domain.Models.ProductProductPhotoUpdateModel>();
+
+    }
+
 }

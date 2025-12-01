@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="VStoreWithContacts" /> .
+/// Mapper class for entity <see cref="VStoreWithContacts"/> .
 /// </summary>
-public class VStoreWithContactsProfile
-  : Profile
+public partial class VStoreWithContactsProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="VStoreWithContactsProfile" /> class.
-  /// </summary>
-  public VStoreWithContactsProfile()
-  {
-    CreateMap<VStoreWithContacts, VStoreWithContactsReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="VStoreWithContactsProfile"/> class.
+    /// </summary>
+    public VStoreWithContactsProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VStoreWithContacts, Platy.AdventureWorks.Repository.Domain.Models.VStoreWithContactsReadModel>();
 
-    CreateMap<VStoreWithContactsCreateModel, VStoreWithContacts>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VStoreWithContactsCreateModel, Platy.AdventureWorks.Repository.Data.Entities.VStoreWithContacts>();
 
-    CreateMap<VStoreWithContacts, VStoreWithContactsCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VStoreWithContacts, Platy.AdventureWorks.Repository.Domain.Models.VStoreWithContactsCreateModel>();
 
-    CreateMap<VStoreWithContacts, VStoreWithContactsUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VStoreWithContacts, Platy.AdventureWorks.Repository.Domain.Models.VStoreWithContactsUpdateModel>();
 
-    CreateMap<VStoreWithContactsUpdateModel, VStoreWithContacts>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VStoreWithContactsUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.VStoreWithContacts>();
 
-    CreateMap<VStoreWithContactsReadModel, VStoreWithContactsUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VStoreWithContactsReadModel, Platy.AdventureWorks.Repository.Domain.Models.VStoreWithContactsUpdateModel>();
+
+    }
+
 }

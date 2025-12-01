@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="Department" /> .
+/// Mapper class for entity <see cref="Department"/> .
 /// </summary>
-public class DepartmentProfile
-  : Profile
+public partial class DepartmentProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="DepartmentProfile" /> class.
-  /// </summary>
-  public DepartmentProfile()
-  {
-    CreateMap<Department, DepartmentReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="DepartmentProfile"/> class.
+    /// </summary>
+    public DepartmentProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.Department, Platy.AdventureWorks.Repository.Domain.Models.DepartmentReadModel>();
 
-    CreateMap<DepartmentCreateModel, Department>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.DepartmentCreateModel, Platy.AdventureWorks.Repository.Data.Entities.Department>();
 
-    CreateMap<Department, DepartmentCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.Department, Platy.AdventureWorks.Repository.Domain.Models.DepartmentCreateModel>();
 
-    CreateMap<Department, DepartmentUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.Department, Platy.AdventureWorks.Repository.Domain.Models.DepartmentUpdateModel>();
 
-    CreateMap<DepartmentUpdateModel, Department>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.DepartmentUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.Department>();
 
-    CreateMap<DepartmentReadModel, DepartmentUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.DepartmentReadModel, Platy.AdventureWorks.Repository.Domain.Models.DepartmentUpdateModel>();
+
+    }
+
 }

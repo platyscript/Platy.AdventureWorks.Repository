@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="SalesOrderHeaderSalesReason" /> .
+/// Mapper class for entity <see cref="SalesOrderHeaderSalesReason"/> .
 /// </summary>
-public class SalesOrderHeaderSalesReasonProfile
-  : Profile
+public partial class SalesOrderHeaderSalesReasonProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="SalesOrderHeaderSalesReasonProfile" /> class.
-  /// </summary>
-  public SalesOrderHeaderSalesReasonProfile()
-  {
-    CreateMap<SalesOrderHeaderSalesReason, SalesOrderHeaderSalesReasonReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="SalesOrderHeaderSalesReasonProfile"/> class.
+    /// </summary>
+    public SalesOrderHeaderSalesReasonProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.SalesOrderHeaderSalesReason, Platy.AdventureWorks.Repository.Domain.Models.SalesOrderHeaderSalesReasonReadModel>();
 
-    CreateMap<SalesOrderHeaderSalesReasonCreateModel, SalesOrderHeaderSalesReason>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.SalesOrderHeaderSalesReasonCreateModel, Platy.AdventureWorks.Repository.Data.Entities.SalesOrderHeaderSalesReason>();
 
-    CreateMap<SalesOrderHeaderSalesReason, SalesOrderHeaderSalesReasonCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.SalesOrderHeaderSalesReason, Platy.AdventureWorks.Repository.Domain.Models.SalesOrderHeaderSalesReasonCreateModel>();
 
-    CreateMap<SalesOrderHeaderSalesReason, SalesOrderHeaderSalesReasonUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.SalesOrderHeaderSalesReason, Platy.AdventureWorks.Repository.Domain.Models.SalesOrderHeaderSalesReasonUpdateModel>();
 
-    CreateMap<SalesOrderHeaderSalesReasonUpdateModel, SalesOrderHeaderSalesReason>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.SalesOrderHeaderSalesReasonUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.SalesOrderHeaderSalesReason>();
 
-    CreateMap<SalesOrderHeaderSalesReasonReadModel, SalesOrderHeaderSalesReasonUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.SalesOrderHeaderSalesReasonReadModel, Platy.AdventureWorks.Repository.Domain.Models.SalesOrderHeaderSalesReasonUpdateModel>();
+
+    }
+
 }

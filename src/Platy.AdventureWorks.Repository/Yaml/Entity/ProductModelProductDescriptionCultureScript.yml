@@ -12,49 +12,49 @@ MapperNamespace: 'ProductModelProductDescriptionCultureProfile'
 MapperBaseClass: Profile
 IsView: False
 Properties:
-  - PropertyName: ProductModelId
-    ColumnName: 'ProductModelID'
-    StoreType: @int
-    NativeType: '@int'
-    DataType: Int32
-    SystemType: Int32
-    IsNullable: False
-    IsPrimaryKey: True
-    IsForeignKey: True
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: ProductDescriptionId
-    ColumnName: 'ProductDescriptionID'
-    StoreType: @int
-    NativeType: '@int'
-    DataType: Int32
-    SystemType: Int32
-    IsNullable: False
-    IsPrimaryKey: True
-    IsForeignKey: True
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: CultureId
-    ColumnName: 'CultureID'
-    StoreType: nchar(6)
-    NativeType: 'nchar'
-    DataType: StringFixedLength
-    SystemType: String
-    Size: 6
-    IsNullable: False
-    IsPrimaryKey: True
-    IsForeignKey: True
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: ModifiedDate
-    ColumnName: 'ModifiedDate'
-    StoreType: datetime
-    NativeType: 'datetime'
-    DataType: DateTime
-    SystemType: DateTime
-    Default: '(getdate())'
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
+    - PropertyName: ProductModelId
+      ColumnName: 'ProductModelID'
+      StoreType: @int
+      NativeType: '@int'
+      DataType: Int32
+      SystemType: Int32
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: True
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: ProductDescriptionId
+      ColumnName: 'ProductDescriptionID'
+      StoreType: @int
+      NativeType: '@int'
+      DataType: Int32
+      SystemType: Int32
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: True
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: CultureId
+      ColumnName: 'CultureID'
+      StoreType: nchar(6)
+      NativeType: 'nchar'
+      DataType: StringFixedLength
+      SystemType: String
+      Size: 6
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: True
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: ModifiedDate
+      ColumnName: 'ModifiedDate'
+      StoreType: datetime
+      NativeType: 'datetime'
+      DataType: DateTime
+      SystemType: DateTime
+      Default: '(getdate())'
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False

@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="VJobCandidate" /> .
+/// Mapper class for entity <see cref="VJobCandidate"/> .
 /// </summary>
-public class VJobCandidateProfile
-  : Profile
+public partial class VJobCandidateProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="VJobCandidateProfile" /> class.
-  /// </summary>
-  public VJobCandidateProfile()
-  {
-    CreateMap<VJobCandidate, VJobCandidateReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="VJobCandidateProfile"/> class.
+    /// </summary>
+    public VJobCandidateProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VJobCandidate, Platy.AdventureWorks.Repository.Domain.Models.VJobCandidateReadModel>();
 
-    CreateMap<VJobCandidateCreateModel, VJobCandidate>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VJobCandidateCreateModel, Platy.AdventureWorks.Repository.Data.Entities.VJobCandidate>();
 
-    CreateMap<VJobCandidate, VJobCandidateCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VJobCandidate, Platy.AdventureWorks.Repository.Domain.Models.VJobCandidateCreateModel>();
 
-    CreateMap<VJobCandidate, VJobCandidateUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VJobCandidate, Platy.AdventureWorks.Repository.Domain.Models.VJobCandidateUpdateModel>();
 
-    CreateMap<VJobCandidateUpdateModel, VJobCandidate>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VJobCandidateUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.VJobCandidate>();
 
-    CreateMap<VJobCandidateReadModel, VJobCandidateUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VJobCandidateReadModel, Platy.AdventureWorks.Repository.Domain.Models.VJobCandidateUpdateModel>();
+
+    }
+
 }

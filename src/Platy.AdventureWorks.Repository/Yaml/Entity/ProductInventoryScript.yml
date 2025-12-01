@@ -12,84 +12,84 @@ MapperNamespace: 'ProductInventoryProfile'
 MapperBaseClass: Profile
 IsView: False
 Properties:
-  - PropertyName: ProductId
-    ColumnName: 'ProductID'
-    StoreType: @int
-    NativeType: '@int'
-    DataType: Int32
-    SystemType: Int32
-    IsNullable: False
-    IsPrimaryKey: True
-    IsForeignKey: True
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: LocationId
-    ColumnName: 'LocationID'
-    StoreType: smallint
-    NativeType: 'smallint'
-    DataType: Int16
-    SystemType: Int16
-    IsNullable: False
-    IsPrimaryKey: True
-    IsForeignKey: True
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: Shelf
-    ColumnName: 'Shelf'
-    StoreType: nvarchar(10)
-    NativeType: 'nvarchar'
-    DataType: String
-    SystemType: String
-    Size: 10
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: Bin
-    ColumnName: 'Bin'
-    StoreType: tinyint
-    NativeType: 'tinyint'
-    DataType: Byte
-    SystemType: Byte
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: Quantity
-    ColumnName: 'Quantity'
-    StoreType: smallint
-    NativeType: 'smallint'
-    DataType: Int16
-    SystemType: Int16
-    Default: '((0))'
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: Rowguid
-    ColumnName: 'rowguid'
-    StoreType: uniqueidentifier
-    NativeType: 'uniqueidentifier'
-    DataType: Guid
-    SystemType: Guid
-    Default: '(newid())'
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: ModifiedDate
-    ColumnName: 'ModifiedDate'
-    StoreType: datetime
-    NativeType: 'datetime'
-    DataType: DateTime
-    SystemType: DateTime
-    Default: '(getdate())'
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
+    - PropertyName: ProductId
+      ColumnName: 'ProductID'
+      StoreType: @int
+      NativeType: '@int'
+      DataType: Int32
+      SystemType: Int32
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: True
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: LocationId
+      ColumnName: 'LocationID'
+      StoreType: smallint
+      NativeType: 'smallint'
+      DataType: Int16
+      SystemType: Int16
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: True
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: Shelf
+      ColumnName: 'Shelf'
+      StoreType: nvarchar(10)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: 10
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: Bin
+      ColumnName: 'Bin'
+      StoreType: tinyint
+      NativeType: 'tinyint'
+      DataType: Byte
+      SystemType: Byte
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: Quantity
+      ColumnName: 'Quantity'
+      StoreType: smallint
+      NativeType: 'smallint'
+      DataType: Int16
+      SystemType: Int16
+      Default: '((0))'
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: Rowguid
+      ColumnName: 'rowguid'
+      StoreType: uniqueidentifier
+      NativeType: 'uniqueidentifier'
+      DataType: Guid
+      SystemType: Guid
+      Default: '(newid())'
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: ModifiedDate
+      ColumnName: 'ModifiedDate'
+      StoreType: datetime
+      NativeType: 'datetime'
+      DataType: DateTime
+      SystemType: DateTime
+      Default: '(getdate())'
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False

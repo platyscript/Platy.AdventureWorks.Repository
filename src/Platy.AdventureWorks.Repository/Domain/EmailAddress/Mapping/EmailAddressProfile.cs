@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="EmailAddress" /> .
+/// Mapper class for entity <see cref="EmailAddress"/> .
 /// </summary>
-public class EmailAddressProfile
-  : Profile
+public partial class EmailAddressProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="EmailAddressProfile" /> class.
-  /// </summary>
-  public EmailAddressProfile()
-  {
-    CreateMap<EmailAddress, EmailAddressReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="EmailAddressProfile"/> class.
+    /// </summary>
+    public EmailAddressProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.EmailAddress, Platy.AdventureWorks.Repository.Domain.Models.EmailAddressReadModel>();
 
-    CreateMap<EmailAddressCreateModel, EmailAddress>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.EmailAddressCreateModel, Platy.AdventureWorks.Repository.Data.Entities.EmailAddress>();
 
-    CreateMap<EmailAddress, EmailAddressCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.EmailAddress, Platy.AdventureWorks.Repository.Domain.Models.EmailAddressCreateModel>();
 
-    CreateMap<EmailAddress, EmailAddressUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.EmailAddress, Platy.AdventureWorks.Repository.Domain.Models.EmailAddressUpdateModel>();
 
-    CreateMap<EmailAddressUpdateModel, EmailAddress>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.EmailAddressUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.EmailAddress>();
 
-    CreateMap<EmailAddressReadModel, EmailAddressUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.EmailAddressReadModel, Platy.AdventureWorks.Repository.Domain.Models.EmailAddressUpdateModel>();
+
+    }
+
 }

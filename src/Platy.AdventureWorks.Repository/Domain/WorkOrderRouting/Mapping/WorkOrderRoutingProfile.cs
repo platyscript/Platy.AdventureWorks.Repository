@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="WorkOrderRouting" /> .
+/// Mapper class for entity <see cref="WorkOrderRouting"/> .
 /// </summary>
-public class WorkOrderRoutingProfile
-  : Profile
+public partial class WorkOrderRoutingProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="WorkOrderRoutingProfile" /> class.
-  /// </summary>
-  public WorkOrderRoutingProfile()
-  {
-    CreateMap<WorkOrderRouting, WorkOrderRoutingReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="WorkOrderRoutingProfile"/> class.
+    /// </summary>
+    public WorkOrderRoutingProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.WorkOrderRouting, Platy.AdventureWorks.Repository.Domain.Models.WorkOrderRoutingReadModel>();
 
-    CreateMap<WorkOrderRoutingCreateModel, WorkOrderRouting>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.WorkOrderRoutingCreateModel, Platy.AdventureWorks.Repository.Data.Entities.WorkOrderRouting>();
 
-    CreateMap<WorkOrderRouting, WorkOrderRoutingCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.WorkOrderRouting, Platy.AdventureWorks.Repository.Domain.Models.WorkOrderRoutingCreateModel>();
 
-    CreateMap<WorkOrderRouting, WorkOrderRoutingUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.WorkOrderRouting, Platy.AdventureWorks.Repository.Domain.Models.WorkOrderRoutingUpdateModel>();
 
-    CreateMap<WorkOrderRoutingUpdateModel, WorkOrderRouting>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.WorkOrderRoutingUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.WorkOrderRouting>();
 
-    CreateMap<WorkOrderRoutingReadModel, WorkOrderRoutingUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.WorkOrderRoutingReadModel, Platy.AdventureWorks.Repository.Domain.Models.WorkOrderRoutingUpdateModel>();
+
+    }
+
 }

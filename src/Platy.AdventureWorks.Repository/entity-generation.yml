@@ -55,12 +55,12 @@ model:
     namespace: '{Project.Namespace}.Domain.Models'
     directory: '{Project.Directory}\Domain\{Entity.Name}\Models'
   read:
-    generate: true
+    generate: true 
     name: '{Entity.Name}ReadModel'
     baseClass: IEntityReadModel
     document: true
   create:
-    generate: true
+    generate: true 
     name: '{Entity.Name}CreateModel'
     baseClass: IEntityCreateModel
     document: true
@@ -87,7 +87,7 @@ model:
         - vVendorWithContacts
         - vVendorWithAddresses
   update:
-    generate: true
+    generate: true 
     name: '{Entity.Name}UpdateModel'
     document: true
     baseClass: IEntityUpdateModel
@@ -182,10 +182,10 @@ script:
       directory: '{Project.Directory}\Events\Delete'
       overwrite: true                                  # overwrite existing file
       merge: true
-#  model:
-#    - templatePath: '.\templates\cs-model.csx'            # path to script file
+  model:
+    - templatePath: '.\templates\cs-model.csx'            # path to script file
 #      fileName: '{Model.Name}.cs'                # filename to save script output
 #      directory: '{Project.Directory}\Domain\Models'   # directory to save script output
 #      namespace: '{Project.Namespace}.Domain.Models'
-#      overwrite: true                                  # overwrite existing file
-#      merge: true    
+      overwrite: true                                  # overwrite existing file
+      merge: false    

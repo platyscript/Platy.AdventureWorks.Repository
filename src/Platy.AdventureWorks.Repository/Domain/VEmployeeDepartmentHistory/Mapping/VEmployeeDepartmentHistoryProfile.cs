@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="VEmployeeDepartmentHistory" /> .
+/// Mapper class for entity <see cref="VEmployeeDepartmentHistory"/> .
 /// </summary>
-public class VEmployeeDepartmentHistoryProfile
-  : Profile
+public partial class VEmployeeDepartmentHistoryProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="VEmployeeDepartmentHistoryProfile" /> class.
-  /// </summary>
-  public VEmployeeDepartmentHistoryProfile()
-  {
-    CreateMap<VEmployeeDepartmentHistory, VEmployeeDepartmentHistoryReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="VEmployeeDepartmentHistoryProfile"/> class.
+    /// </summary>
+    public VEmployeeDepartmentHistoryProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VEmployeeDepartmentHistory, Platy.AdventureWorks.Repository.Domain.Models.VEmployeeDepartmentHistoryReadModel>();
 
-    CreateMap<VEmployeeDepartmentHistoryCreateModel, VEmployeeDepartmentHistory>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VEmployeeDepartmentHistoryCreateModel, Platy.AdventureWorks.Repository.Data.Entities.VEmployeeDepartmentHistory>();
 
-    CreateMap<VEmployeeDepartmentHistory, VEmployeeDepartmentHistoryCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VEmployeeDepartmentHistory, Platy.AdventureWorks.Repository.Domain.Models.VEmployeeDepartmentHistoryCreateModel>();
 
-    CreateMap<VEmployeeDepartmentHistory, VEmployeeDepartmentHistoryUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VEmployeeDepartmentHistory, Platy.AdventureWorks.Repository.Domain.Models.VEmployeeDepartmentHistoryUpdateModel>();
 
-    CreateMap<VEmployeeDepartmentHistoryUpdateModel, VEmployeeDepartmentHistory>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VEmployeeDepartmentHistoryUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.VEmployeeDepartmentHistory>();
 
-    CreateMap<VEmployeeDepartmentHistoryReadModel, VEmployeeDepartmentHistoryUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VEmployeeDepartmentHistoryReadModel, Platy.AdventureWorks.Repository.Domain.Models.VEmployeeDepartmentHistoryUpdateModel>();
+
+    }
+
 }

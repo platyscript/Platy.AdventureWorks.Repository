@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="PurchaseOrderDetail" /> .
+/// Mapper class for entity <see cref="PurchaseOrderDetail"/> .
 /// </summary>
-public class PurchaseOrderDetailProfile
-  : Profile
+public partial class PurchaseOrderDetailProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="PurchaseOrderDetailProfile" /> class.
-  /// </summary>
-  public PurchaseOrderDetailProfile()
-  {
-    CreateMap<PurchaseOrderDetail, PurchaseOrderDetailReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="PurchaseOrderDetailProfile"/> class.
+    /// </summary>
+    public PurchaseOrderDetailProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.PurchaseOrderDetail, Platy.AdventureWorks.Repository.Domain.Models.PurchaseOrderDetailReadModel>();
 
-    CreateMap<PurchaseOrderDetailCreateModel, PurchaseOrderDetail>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.PurchaseOrderDetailCreateModel, Platy.AdventureWorks.Repository.Data.Entities.PurchaseOrderDetail>();
 
-    CreateMap<PurchaseOrderDetail, PurchaseOrderDetailCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.PurchaseOrderDetail, Platy.AdventureWorks.Repository.Domain.Models.PurchaseOrderDetailCreateModel>();
 
-    CreateMap<PurchaseOrderDetail, PurchaseOrderDetailUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.PurchaseOrderDetail, Platy.AdventureWorks.Repository.Domain.Models.PurchaseOrderDetailUpdateModel>();
 
-    CreateMap<PurchaseOrderDetailUpdateModel, PurchaseOrderDetail>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.PurchaseOrderDetailUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.PurchaseOrderDetail>();
 
-    CreateMap<PurchaseOrderDetailReadModel, PurchaseOrderDetailUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.PurchaseOrderDetailReadModel, Platy.AdventureWorks.Repository.Domain.Models.PurchaseOrderDetailUpdateModel>();
+
+    }
+
 }

@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="EmployeeDepartmentHistory" /> .
+/// Mapper class for entity <see cref="EmployeeDepartmentHistory"/> .
 /// </summary>
-public class EmployeeDepartmentHistoryProfile
-  : Profile
+public partial class EmployeeDepartmentHistoryProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="EmployeeDepartmentHistoryProfile" /> class.
-  /// </summary>
-  public EmployeeDepartmentHistoryProfile()
-  {
-    CreateMap<EmployeeDepartmentHistory, EmployeeDepartmentHistoryReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="EmployeeDepartmentHistoryProfile"/> class.
+    /// </summary>
+    public EmployeeDepartmentHistoryProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.EmployeeDepartmentHistory, Platy.AdventureWorks.Repository.Domain.Models.EmployeeDepartmentHistoryReadModel>();
 
-    CreateMap<EmployeeDepartmentHistoryCreateModel, EmployeeDepartmentHistory>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.EmployeeDepartmentHistoryCreateModel, Platy.AdventureWorks.Repository.Data.Entities.EmployeeDepartmentHistory>();
 
-    CreateMap<EmployeeDepartmentHistory, EmployeeDepartmentHistoryCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.EmployeeDepartmentHistory, Platy.AdventureWorks.Repository.Domain.Models.EmployeeDepartmentHistoryCreateModel>();
 
-    CreateMap<EmployeeDepartmentHistory, EmployeeDepartmentHistoryUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.EmployeeDepartmentHistory, Platy.AdventureWorks.Repository.Domain.Models.EmployeeDepartmentHistoryUpdateModel>();
 
-    CreateMap<EmployeeDepartmentHistoryUpdateModel, EmployeeDepartmentHistory>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.EmployeeDepartmentHistoryUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.EmployeeDepartmentHistory>();
 
-    CreateMap<EmployeeDepartmentHistoryReadModel, EmployeeDepartmentHistoryUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.EmployeeDepartmentHistoryReadModel, Platy.AdventureWorks.Repository.Domain.Models.EmployeeDepartmentHistoryUpdateModel>();
+
+    }
+
 }

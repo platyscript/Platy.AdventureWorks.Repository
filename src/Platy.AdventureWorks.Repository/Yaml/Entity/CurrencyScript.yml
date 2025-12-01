@@ -12,39 +12,39 @@ MapperNamespace: 'CurrencyProfile'
 MapperBaseClass: Profile
 IsView: False
 Properties:
-  - PropertyName: CurrencyCode
-    ColumnName: 'CurrencyCode'
-    StoreType: nchar(3)
-    NativeType: 'nchar'
-    DataType: StringFixedLength
-    SystemType: String
-    Size: 3
-    IsNullable: False
-    IsPrimaryKey: True
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
-  - PropertyName: Name
-    ColumnName: 'Name'
-    StoreType: nvarchar(50)
-    NativeType: 'nvarchar'
-    DataType: String
-    SystemType: String
-    Size: 50
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: True
-  - PropertyName: ModifiedDate
-    ColumnName: 'ModifiedDate'
-    StoreType: datetime
-    NativeType: 'datetime'
-    DataType: DateTime
-    SystemType: DateTime
-    Default: '(getdate())'
-    IsNullable: False
-    IsPrimaryKey: False
-    IsForeignKey: False
-    IsRowVersion: False
-    IsUnique: False
+    - PropertyName: CurrencyCode
+      ColumnName: 'CurrencyCode'
+      StoreType: nchar(3)
+      NativeType: 'nchar'
+      DataType: StringFixedLength
+      SystemType: String
+      Size: 3
+      IsNullable: False
+      IsPrimaryKey: True
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False
+    - PropertyName: Name
+      ColumnName: 'Name'
+      StoreType: nvarchar(50)
+      NativeType: 'nvarchar'
+      DataType: String
+      SystemType: String
+      Size: 50
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: True
+    - PropertyName: ModifiedDate
+      ColumnName: 'ModifiedDate'
+      StoreType: datetime
+      NativeType: 'datetime'
+      DataType: DateTime
+      SystemType: DateTime
+      Default: '(getdate())'
+      IsNullable: False
+      IsPrimaryKey: False
+      IsForeignKey: False
+      IsRowVersion: False
+      IsUnique: False

@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="VSalesPerson" /> .
+/// Mapper class for entity <see cref="VSalesPerson"/> .
 /// </summary>
-public class VSalesPersonProfile
-  : Profile
+public partial class VSalesPersonProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="VSalesPersonProfile" /> class.
-  /// </summary>
-  public VSalesPersonProfile()
-  {
-    CreateMap<VSalesPerson, VSalesPersonReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="VSalesPersonProfile"/> class.
+    /// </summary>
+    public VSalesPersonProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VSalesPerson, Platy.AdventureWorks.Repository.Domain.Models.VSalesPersonReadModel>();
 
-    CreateMap<VSalesPersonCreateModel, VSalesPerson>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VSalesPersonCreateModel, Platy.AdventureWorks.Repository.Data.Entities.VSalesPerson>();
 
-    CreateMap<VSalesPerson, VSalesPersonCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VSalesPerson, Platy.AdventureWorks.Repository.Domain.Models.VSalesPersonCreateModel>();
 
-    CreateMap<VSalesPerson, VSalesPersonUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.VSalesPerson, Platy.AdventureWorks.Repository.Domain.Models.VSalesPersonUpdateModel>();
 
-    CreateMap<VSalesPersonUpdateModel, VSalesPerson>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VSalesPersonUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.VSalesPerson>();
 
-    CreateMap<VSalesPersonReadModel, VSalesPersonUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.VSalesPersonReadModel, Platy.AdventureWorks.Repository.Domain.Models.VSalesPersonUpdateModel>();
+
+    }
+
 }

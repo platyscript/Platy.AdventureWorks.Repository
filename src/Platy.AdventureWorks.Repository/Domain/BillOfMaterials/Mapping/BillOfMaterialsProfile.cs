@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="BillOfMaterials" /> .
+/// Mapper class for entity <see cref="BillOfMaterials"/> .
 /// </summary>
-public class BillOfMaterialsProfile
-  : Profile
+public partial class BillOfMaterialsProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="BillOfMaterialsProfile" /> class.
-  /// </summary>
-  public BillOfMaterialsProfile()
-  {
-    CreateMap<BillOfMaterials, BillOfMaterialsReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="BillOfMaterialsProfile"/> class.
+    /// </summary>
+    public BillOfMaterialsProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.BillOfMaterials, Platy.AdventureWorks.Repository.Domain.Models.BillOfMaterialsReadModel>();
 
-    CreateMap<BillOfMaterialsCreateModel, BillOfMaterials>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.BillOfMaterialsCreateModel, Platy.AdventureWorks.Repository.Data.Entities.BillOfMaterials>();
 
-    CreateMap<BillOfMaterials, BillOfMaterialsCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.BillOfMaterials, Platy.AdventureWorks.Repository.Domain.Models.BillOfMaterialsCreateModel>();
 
-    CreateMap<BillOfMaterials, BillOfMaterialsUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.BillOfMaterials, Platy.AdventureWorks.Repository.Domain.Models.BillOfMaterialsUpdateModel>();
 
-    CreateMap<BillOfMaterialsUpdateModel, BillOfMaterials>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.BillOfMaterialsUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.BillOfMaterials>();
 
-    CreateMap<BillOfMaterialsReadModel, BillOfMaterialsUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.BillOfMaterialsReadModel, Platy.AdventureWorks.Repository.Domain.Models.BillOfMaterialsUpdateModel>();
+
+    }
+
 }

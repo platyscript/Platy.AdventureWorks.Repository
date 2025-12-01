@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="CountryRegion" /> .
+/// Mapper class for entity <see cref="CountryRegion"/> .
 /// </summary>
-public class CountryRegionProfile
-  : Profile
+public partial class CountryRegionProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="CountryRegionProfile" /> class.
-  /// </summary>
-  public CountryRegionProfile()
-  {
-    CreateMap<CountryRegion, CountryRegionReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CountryRegionProfile"/> class.
+    /// </summary>
+    public CountryRegionProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.CountryRegion, Platy.AdventureWorks.Repository.Domain.Models.CountryRegionReadModel>();
 
-    CreateMap<CountryRegionCreateModel, CountryRegion>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.CountryRegionCreateModel, Platy.AdventureWorks.Repository.Data.Entities.CountryRegion>();
 
-    CreateMap<CountryRegion, CountryRegionCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.CountryRegion, Platy.AdventureWorks.Repository.Domain.Models.CountryRegionCreateModel>();
 
-    CreateMap<CountryRegion, CountryRegionUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.CountryRegion, Platy.AdventureWorks.Repository.Domain.Models.CountryRegionUpdateModel>();
 
-    CreateMap<CountryRegionUpdateModel, CountryRegion>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.CountryRegionUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.CountryRegion>();
 
-    CreateMap<CountryRegionReadModel, CountryRegionUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.CountryRegionReadModel, Platy.AdventureWorks.Repository.Domain.Models.CountryRegionUpdateModel>();
+
+    }
+
 }

@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="ProductCostHistory" /> .
+/// Mapper class for entity <see cref="ProductCostHistory"/> .
 /// </summary>
-public class ProductCostHistoryProfile
-  : Profile
+public partial class ProductCostHistoryProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="ProductCostHistoryProfile" /> class.
-  /// </summary>
-  public ProductCostHistoryProfile()
-  {
-    CreateMap<ProductCostHistory, ProductCostHistoryReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="ProductCostHistoryProfile"/> class.
+    /// </summary>
+    public ProductCostHistoryProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.ProductCostHistory, Platy.AdventureWorks.Repository.Domain.Models.ProductCostHistoryReadModel>();
 
-    CreateMap<ProductCostHistoryCreateModel, ProductCostHistory>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.ProductCostHistoryCreateModel, Platy.AdventureWorks.Repository.Data.Entities.ProductCostHistory>();
 
-    CreateMap<ProductCostHistory, ProductCostHistoryCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.ProductCostHistory, Platy.AdventureWorks.Repository.Domain.Models.ProductCostHistoryCreateModel>();
 
-    CreateMap<ProductCostHistory, ProductCostHistoryUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.ProductCostHistory, Platy.AdventureWorks.Repository.Domain.Models.ProductCostHistoryUpdateModel>();
 
-    CreateMap<ProductCostHistoryUpdateModel, ProductCostHistory>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.ProductCostHistoryUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.ProductCostHistory>();
 
-    CreateMap<ProductCostHistoryReadModel, ProductCostHistoryUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.ProductCostHistoryReadModel, Platy.AdventureWorks.Repository.Domain.Models.ProductCostHistoryUpdateModel>();
+
+    }
+
 }

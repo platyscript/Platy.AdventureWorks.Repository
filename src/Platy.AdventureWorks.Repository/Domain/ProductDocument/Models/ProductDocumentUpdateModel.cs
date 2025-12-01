@@ -1,28 +1,31 @@
+using System;
+using System.Collections.Generic;
+
 namespace Platy.AdventureWorks.Repository.Domain.Models;
 
 /// <summary>
-///   View Model class
+/// View Model class
 /// </summary>
-public class ProductDocumentUpdateModel
-  : IEntityUpdateModel
+public partial class ProductDocumentUpdateModel
+    : IEntityUpdateModel
 {
-  #region Generated Properties
+    #region Generated Properties
+    /// <summary>
+    /// Gets or sets the property value for 'ProductId'.
+    /// </summary>
+    /// <value>
+    /// The property value for 'ProductId'.
+    /// </value>
+    public int ProductId { get; set; }
 
-  /// <summary>
-  ///   Gets or sets the property value for 'ProductId'.
-  /// </summary>
-  /// <value>
-  ///   The property value for 'ProductId'.
-  /// </value>
-  public int ProductId { get; set; }
+    /// <summary>
+    /// Gets or sets the property value for 'ModifiedDate'.
+    /// </summary>
+    /// <value>
+    /// The property value for 'ModifiedDate'.
+    /// </value>
+    public DateTime ModifiedDate { get; set; }
 
-  /// <summary>
-  ///   Gets or sets the property value for 'ModifiedDate'.
-  /// </summary>
-  /// <value>
-  ///   The property value for 'ModifiedDate'.
-  /// </value>
-  public DateTime ModifiedDate { get; set; }
+    #endregion
 
-  #endregion
 }

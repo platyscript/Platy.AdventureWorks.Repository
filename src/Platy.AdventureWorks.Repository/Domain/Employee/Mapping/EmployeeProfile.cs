@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="Employee" /> .
+/// Mapper class for entity <see cref="Employee"/> .
 /// </summary>
-public class EmployeeProfile
-  : Profile
+public partial class EmployeeProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="EmployeeProfile" /> class.
-  /// </summary>
-  public EmployeeProfile()
-  {
-    CreateMap<Employee, EmployeeReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="EmployeeProfile"/> class.
+    /// </summary>
+    public EmployeeProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.Employee, Platy.AdventureWorks.Repository.Domain.Models.EmployeeReadModel>();
 
-    CreateMap<EmployeeCreateModel, Employee>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.EmployeeCreateModel, Platy.AdventureWorks.Repository.Data.Entities.Employee>();
 
-    CreateMap<Employee, EmployeeCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.Employee, Platy.AdventureWorks.Repository.Domain.Models.EmployeeCreateModel>();
 
-    CreateMap<Employee, EmployeeUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.Employee, Platy.AdventureWorks.Repository.Domain.Models.EmployeeUpdateModel>();
 
-    CreateMap<EmployeeUpdateModel, Employee>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.EmployeeUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.Employee>();
 
-    CreateMap<EmployeeReadModel, EmployeeUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.EmployeeReadModel, Platy.AdventureWorks.Repository.Domain.Models.EmployeeUpdateModel>();
+
+    }
+
 }

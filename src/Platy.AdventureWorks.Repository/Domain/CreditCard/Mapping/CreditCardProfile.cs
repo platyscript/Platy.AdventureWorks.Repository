@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="CreditCard" /> .
+/// Mapper class for entity <see cref="CreditCard"/> .
 /// </summary>
-public class CreditCardProfile
-  : Profile
+public partial class CreditCardProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="CreditCardProfile" /> class.
-  /// </summary>
-  public CreditCardProfile()
-  {
-    CreateMap<CreditCard, CreditCardReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CreditCardProfile"/> class.
+    /// </summary>
+    public CreditCardProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.CreditCard, Platy.AdventureWorks.Repository.Domain.Models.CreditCardReadModel>();
 
-    CreateMap<CreditCardCreateModel, CreditCard>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.CreditCardCreateModel, Platy.AdventureWorks.Repository.Data.Entities.CreditCard>();
 
-    CreateMap<CreditCard, CreditCardCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.CreditCard, Platy.AdventureWorks.Repository.Domain.Models.CreditCardCreateModel>();
 
-    CreateMap<CreditCard, CreditCardUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.CreditCard, Platy.AdventureWorks.Repository.Domain.Models.CreditCardUpdateModel>();
 
-    CreateMap<CreditCardUpdateModel, CreditCard>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.CreditCardUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.CreditCard>();
 
-    CreateMap<CreditCardReadModel, CreditCardUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.CreditCardReadModel, Platy.AdventureWorks.Repository.Domain.Models.CreditCardUpdateModel>();
+
+    }
+
 }

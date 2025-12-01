@@ -1,29 +1,35 @@
+using System;
+
+using AutoMapper;
+
 using Platy.AdventureWorks.Repository.Data.Entities;
 using Platy.AdventureWorks.Repository.Domain.Models;
 
 namespace Platy.AdventureWorks.Repository.Domain.Mapping;
 
 /// <summary>
-///   Mapper class for entity <see cref="PersonCreditCard" /> .
+/// Mapper class for entity <see cref="PersonCreditCard"/> .
 /// </summary>
-public class PersonCreditCardProfile
-  : Profile
+public partial class PersonCreditCardProfile
+    : Profile
 {
-  /// <summary>
-  ///   Initializes a new instance of the <see cref="PersonCreditCardProfile" /> class.
-  /// </summary>
-  public PersonCreditCardProfile()
-  {
-    CreateMap<PersonCreditCard, PersonCreditCardReadModel>();
+    /// <summary>
+    /// Initializes a new instance of the <see cref="PersonCreditCardProfile"/> class.
+    /// </summary>
+    public PersonCreditCardProfile()
+    {
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.PersonCreditCard, Platy.AdventureWorks.Repository.Domain.Models.PersonCreditCardReadModel>();
 
-    CreateMap<PersonCreditCardCreateModel, PersonCreditCard>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.PersonCreditCardCreateModel, Platy.AdventureWorks.Repository.Data.Entities.PersonCreditCard>();
 
-    CreateMap<PersonCreditCard, PersonCreditCardCreateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.PersonCreditCard, Platy.AdventureWorks.Repository.Domain.Models.PersonCreditCardCreateModel>();
 
-    CreateMap<PersonCreditCard, PersonCreditCardUpdateModel>();
+        CreateMap<Platy.AdventureWorks.Repository.Data.Entities.PersonCreditCard, Platy.AdventureWorks.Repository.Domain.Models.PersonCreditCardUpdateModel>();
 
-    CreateMap<PersonCreditCardUpdateModel, PersonCreditCard>();
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.PersonCreditCardUpdateModel, Platy.AdventureWorks.Repository.Data.Entities.PersonCreditCard>();
 
-    CreateMap<PersonCreditCardReadModel, PersonCreditCardUpdateModel>();
-  }
+        CreateMap<Platy.AdventureWorks.Repository.Domain.Models.PersonCreditCardReadModel, Platy.AdventureWorks.Repository.Domain.Models.PersonCreditCardUpdateModel>();
+
+    }
+
 }

@@ -22,7 +22,7 @@
     <IncludeContentInPack>true</IncludeContentInPack>
     <RepositoryUrl>https://github.com/platyscript/Platy.AdventureWorks.Repository</RepositoryUrl>
     <PackageTags>DDD;Domain-Driven Design;Repository;ValueObject;Value Object;Clean Architecture;Clean Architecture Template; Repository Pattern</PackageTags>
-    <Version>0.1.3</Version>
+    <Version>0.1.4</Version>
     <PackageReleaseNotes>
       * Net9
     </PackageReleaseNotes>

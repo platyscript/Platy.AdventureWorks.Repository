@@ -1,6 +1,7 @@
 ﻿<Project>
   <PropertyGroup>
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+	<CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
     <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
     <TargetFramework>net9.0</TargetFramework>
   </PropertyGroup>

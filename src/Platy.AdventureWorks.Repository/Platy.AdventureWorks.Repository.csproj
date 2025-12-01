@@ -60,4 +60,8 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Platy.Shared\src\Platy.Shared\Platy.Shared.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Yaml\" />
+  </ItemGroup>
 </Project>

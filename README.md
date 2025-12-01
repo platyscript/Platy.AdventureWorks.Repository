@@ -17,6 +17,12 @@ A project template that I use to quickly create a set of repository classes for 
 
 # Build solution
 
-First, initialize the submodule using `git submodule update --init`.
+First, initialize the submodules using `git submodule update --init`.
 
-Build the solution - `Platy.AdventureWorks.Repostory.sln`
+Build the solution - `Platy.AdventureWorks.Repository.sln`.
+
+Open the solution - `EntityFrameworkCore.Generator/EntityFrameworkCore.Generator.sln` and build it.
+This is one of the submodules downloaded.
+
+Execute the command `..\..\efg\EntityFrameworkCore.Generator.exe generate -f .\entity-generation.yml`.
+This generates the domain files. Make sure adventure works database is available.

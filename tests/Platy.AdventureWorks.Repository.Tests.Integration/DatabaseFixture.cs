@@ -63,7 +63,7 @@ public class DatabaseFixture : IDisposable
     
     // 3. Add the adventureworks database to the service collection
     var serviceCollection = new ServiceCollection();
-    serviceCollection.AddAdventureWorkDatabase(connectionString);
+    serviceCollection.AddAdventureWorkDatabase(connectionString ?? "");
 
     // 4. Create the mapper configuration for the assembly
     serviceCollection.AddAutoMapper(cfg => { }, typeof(AddressProfile));

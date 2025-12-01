@@ -24,5 +24,5 @@ Build the solution - `Platy.AdventureWorks.Repository.sln`.
 Open the solution - `EntityFrameworkCore.Generator/EntityFrameworkCore.Generator.sln` and build it.
 This is one of the submodules downloaded.
 
-Execute the command `..\..\efg\EntityFrameworkCore.Generator.exe generate -f .\entity-generation.yml`.
-This generates the domain files. Make sure adventure works database is available.
+Execute the command `..\..\efg\EntityFrameworkCore.Generator.exe generate -f .\entity-generation.yml` from the directory of `Platy.AdventureWorks.Repository.csproj`.
+This generates the domain files. Make sure the AdventureWorks database is available.
